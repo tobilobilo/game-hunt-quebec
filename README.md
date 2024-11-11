@@ -1,4 +1,4 @@
-# Moyenne Mediane
+# Game Chasing Québec
 
 Game Chasing Québec, le répertoire des adresses de boutiques de jeux vidéos dans la province.
 
