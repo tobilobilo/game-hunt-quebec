@@ -1,0 +1,17 @@
+@use "sass:color";
+
+header.main-header {
+  background-color: $blue-dark;
+  color: #fff;
+}
+
+.button {
+  background-color: $blue-light;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: color.scale($blue-light, $lightness: 15%, $space: oklch);
+  }
+}
