@@ -1,12 +1,21 @@
-import "../assets/styles/App.css";
-import SimpleMap from "../features/map/components/SimpleMap";
+import "../assets/styles/main.scss";
+import "bootstrap/dist/css/bootstrap-grid.min.css";
+import Header from "../components/Header/Header";
+import SimpleMap from "../components/SimpleMap";
+import Banner from "../components/Banner/Banner";
+import useLanguageRoute from "../hooks/useLanguageRoute";
 
 function App() {
+  useLanguageRoute();
+
   return (
     <>
-      <div>
-        <h1>Game Chasing Québec</h1>
-        <SimpleMap />
+      <div className="container-fluid">
+        <div className="row">
+          <Header />
+          <Banner />
+          <SimpleMap />
+        </div>
       </div>
     </>
   );
