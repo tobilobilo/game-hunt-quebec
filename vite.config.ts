@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: "/carnet-gaming-quebec",
   css: {
     preprocessorOptions: {
       scss: {
@@ -12,8 +13,7 @@ export default defineConfig({
           @use "/src/assets/styles/variables.scss" as *;
           @use "/src/assets/styles/mixins.scss" as *;
           @use "/src/assets/styles/fonts.scss" as *;
-        `,
-        base: "/carnet-gaming-quebec",
+        `
       }
     }
   },
