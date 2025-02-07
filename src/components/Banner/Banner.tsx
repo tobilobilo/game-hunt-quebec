@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import "./Banner.scss";
 
 const Banner = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className="banner col-12">
