@@ -1,4 +1,107 @@
 .banner {
   background-color: $blue-light;
+  height: 110px;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    height: 146px;
+    width: auto;
+  }
+
+  p {
+    @include geologica-300;
+    font-size: 1rem;
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: 768px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .icons-container {
+    position: absolute;
+    z-index: 0;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .banner-icon {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      user-select: none;
+
+      &.icon-road {
+        height: 100%;
+        transform: translateX(95px);
+      }
+
+      &.icon-controller {
+        height: 75px;
+        transform: translateX(-100px);
+      }
+
+      &.icon-car {
+        height: 70px;
+        transform: translateX(-250px);
+        top: auto;
+        bottom: 0;
+      }
+
+      &.icon-gameboy {
+        height: 60px;
+        transform: translateX(10px);
+        top: auto;
+        bottom: -10px;
+      }
+
+      @media (max-width: 767px) {
+        &.icon-dollar,
+        &.icon-snes {
+          display: none;
+        }
+      }
+
+      @media (min-width: 768px) {
+        &.icon-road {
+          transform: translateX(-420px);
+        }
+  
+        &.icon-controller {
+          height: 80px;
+          transform: translateX(-150px);
+        }
+  
+        &.icon-car {
+          height: 145px;
+          transform: translateX(340px);
+        }
+  
+        &.icon-gameboy {
+          height: 125px;
+          transform: translateX(10px);
+          bottom: 0;
+        }
+
+        &.icon-dollar {
+          height: 80px;
+          transform: translateX(190px);
+        }
+
+        &.icon-snes {
+          height: 110px;
+          transform: translateX(-620px);
+        }
+      }
+    }
+  }
 }

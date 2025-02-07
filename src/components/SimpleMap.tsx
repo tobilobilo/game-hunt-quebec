@@ -12,7 +12,6 @@ const SimpleMap = () => {
   return (
     // Make sure you set the height and width of the map container otherwise the map won't show
     <div id="map" className="col-12">
-      <header>I'm a header</header>
       <MapContainer center={[latitude, longitude]} zoom={11} ref={mapRef} style={{ height: "100%", width: "100%" }} scrollWheelZoom={false}>
         <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         {/* Additional map layers or components can be added here */}

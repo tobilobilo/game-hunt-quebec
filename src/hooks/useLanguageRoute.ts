@@ -5,15 +5,16 @@ import { useNavigate, useParams } from "react-router";
 const useLanguageRoute = () => {
     const navigate = useNavigate();
     const params = useParams();
-    const { i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
 
-    useEffect(() => {        
+    useEffect(() => {
         if (!params.lang || (Array.isArray(i18n.options.supportedLngs) && !i18n.options.supportedLngs.includes(params.lang))) {
             navigate(`/${i18n.options.fallbackLng}`);
             return;
         }
         
         i18n.changeLanguage(params.lang);
+        document.title = `${t('title')} | ${t('motto')}`;
     }, [params.lang]);
 };
 

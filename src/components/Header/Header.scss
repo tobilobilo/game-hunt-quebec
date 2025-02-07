@@ -3,15 +3,62 @@
 header.main-header {
   background-color: $blue-dark;
   color: #fff;
+
+  .main-header-content {
+    @include max-width;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    @include geologica-400;
+    font-size: 1rem;
+    margin: 0.75rem 0;
+    position: relative;
+    padding-left: 2rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.4rem;
+      padding-left: 2.6rem;
+    }
+    
+    .header-logo {
+      display: inline;
+      height: 1.4rem;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @media (min-width: 768px) {
+        height: 1.75rem;
+      }
+    }
+  }
 }
 
-.button {
-  background-color: $blue-light;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+.change-language {
+  margin: 0.75rem 0;
+  margin-left: .5rem;
 
-  &:hover {
-    background-color: color.scale($blue-light, $lightness: 15%, $space: oklch);
+  .button {
+    @include geologica-300;
+    color: white;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    vertical-align: sub;
+    font-size: 0.7rem;
+
+    @media (min-width: 768px) {
+      font-size: 0.8rem;
+    }
+    
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

@@ -1,10 +1,8 @@
 {
-  "appname": "Gaming Booklet Quebec",
+  "title": "Gaming Booklet Quebec",
+  "motto": "A guide to video game stores in Quebec",
   "header": {
     
-  },
-  "banner": {
-    "main": "The"
   },
   "footer": {
 

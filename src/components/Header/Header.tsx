@@ -14,18 +14,24 @@ const Header = () => {
 
   return (
     <header className="main-header col-12">
-      <h1>{t("appname")}</h1>
-      <p>{i18n.language}</p>
-      {i18n.language !== "en" && (
-        <button onClick={() => changeLanguage("en")} className="button">
-          english
-        </button>
-      )}
-      {i18n.language !== "fr" && (
-        <button onClick={() => changeLanguage("fr")} className="button">
-          français
-        </button>
-      )}
+      <div className="main-header-content">
+        <h1>
+          <img src="/src/assets/svg/logo-round-white.svg" alt="Logo" className="header-logo" aria-hidden="true" />
+          {t("title")}
+        </h1>
+        <div className="change-language">
+          {i18n.language !== "en" && (
+            <button onClick={() => changeLanguage("en")} className="button">
+              english
+            </button>
+          )}
+          {i18n.language !== "fr" && (
+            <button onClick={() => changeLanguage("fr")} className="button">
+              français
+            </button>
+          )}
+        </div>
+      </div>
     </header>
   );
 };
