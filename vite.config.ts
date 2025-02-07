@@ -12,7 +12,8 @@ export default defineConfig({
           @use "/src/assets/styles/variables.scss" as *;
           @use "/src/assets/styles/mixins.scss" as *;
           @use "/src/assets/styles/fonts.scss" as *;
-        `
+        `,
+        base: "/carnet-gaming-quebec",
       }
     }
   },
