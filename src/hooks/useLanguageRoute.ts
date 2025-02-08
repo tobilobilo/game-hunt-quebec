@@ -9,7 +9,7 @@ const useLanguageRoute = () => {
 
     useEffect(() => {
         if (!params.lang || (Array.isArray(i18n.options.supportedLngs) && !i18n.options.supportedLngs.includes(params.lang))) {
-            navigate(`/${i18n.options.fallbackLng}`);
+            //navigate(`/${i18n.options.fallbackLng}`); TODO
             return;
         }
         

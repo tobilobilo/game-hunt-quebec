@@ -15,7 +15,7 @@ i18n
       escapeValue: false, // not needed for React
     },
     backend: {
-      loadPath: '/src/locales/{{lng}}.json', // path to the translation files
+      loadPath: './src/locales/{{lng}}.json', // path to the translation files
     },
   });
 

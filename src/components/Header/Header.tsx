@@ -16,7 +16,7 @@ const Header = () => {
     <header className="main-header col-12">
       <div className="main-header-content">
         <h1>
-          <img src="/src/assets/svg/logo-round-white.svg" alt="Logo" className="header-logo" aria-hidden="true" />
+          <img src="./src/assets/svg/logo-round-white.svg" alt="Logo" className="header-logo" aria-hidden="true" />
           {t("title")}
         </h1>
         <div className="change-language">
