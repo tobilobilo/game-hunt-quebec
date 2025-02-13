@@ -1,10 +1,18 @@
 {
-  "title": "Gaming Booklet Quebec",
+  "title": "Game Hunt Quebec",
   "motto": "A guide to video game stores in Quebec",
   "header": {
     
   },
   "footer": {
 
+  },
+  "summary": {
+    "title": "The hunt is on!",
+    "text": "TODO en: Ce projet cherche à regrouper les adresses des boutiques et des destinations à connaître pour les amateurs et collectioneurs de jeux vidéos de la province. Mon but est d'amasser de de maintenir les informations sur ces adresses afin de garder ce répertoire le plus à jour possible."
+  },
+  "notFound": {
+    "text": "It seems that you have lost your way...",
+    "backBtn": "Back to Home"
   }
 }
