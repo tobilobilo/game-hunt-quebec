@@ -1,0 +1,17 @@
+.summary {
+  @include max-width-2;
+  margin-top: 30px;
+
+  h2 {
+    @include front-title;
+  }
+
+  p {
+    margin: 0 0 .6rem;
+    font-size: .8rem;
+
+    @media (min-width: 768px) {
+      font-size: .9rem;
+    }
+  }
+}

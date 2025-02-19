@@ -1,23 +1,20 @@
 import { useTranslation } from "react-i18next";
 import "./Header.scss";
-import { useNavigate, useParams } from "react-router";
+import logo from "/src/assets/svg/logo-round-white.svg";
+import { useAppNavigation } from "../../hooks/useNavigation";
 
 const Header = () => {
-  const navigate = useNavigate();
   const { t, i18n } = useTranslation();
-  const params = useParams();
-
-  function changeLanguage(lang: string): void {
-    const store = params.store ? `/${params.store}` : "";
-    navigate(`/${lang}${store}`);
-  }
+  const { goToHome, changeLanguage } = useAppNavigation();
 
   return (
     <header className="main-header col-12">
       <div className="main-header-content">
         <h1>
-          <img src="/src/assets/svg/logo-round-white.svg" alt="Logo" className="header-logo" aria-hidden="true" />
-          {t("title")}
+          <button onClick={goToHome}>
+            <img src={logo} alt="Logo" className="header-logo" aria-hidden="true" />
+            {t("title")}
+          </button>
         </h1>
         <div className="change-language">
           {i18n.language !== "en" && (

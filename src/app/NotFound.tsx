@@ -1,0 +1,31 @@
+import "../assets/styles/main.scss";
+import "bootstrap/dist/css/bootstrap-grid.min.css";
+import Header from "../components/Header/Header";
+import Banner from "../components/Banner/Banner";
+import { t } from "i18next";
+import { useAppNavigation } from "../hooks/useNavigation";
+
+function NotFound() {
+  //useLanguageRoute();
+  const { goToHome } = useAppNavigation();
+
+  return (
+    <>
+      <div className="container-fluid">
+        <div className="row">
+          <Header />
+          <Banner />
+          <div className="notfound col-12">
+            <h1>404</h1>
+            <p>{t("notFound.text")}</p>
+            <button className="btn" onClick={goToHome}>
+              {t("notFound.backBtn")}
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default NotFound;

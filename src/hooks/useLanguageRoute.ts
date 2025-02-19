@@ -7,7 +7,7 @@ const useLanguageRoute = () => {
     const params = useParams();
     const { t, i18n } = useTranslation();
 
-    useEffect(() => {
+    useEffect(() => {        
         if (!params.lang || (Array.isArray(i18n.options.supportedLngs) && !i18n.options.supportedLngs.includes(params.lang))) {
             navigate(`/${i18n.options.fallbackLng}`);
             return;

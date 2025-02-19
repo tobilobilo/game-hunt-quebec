@@ -2,14 +2,18 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./app/App.tsx";
 import "./i18n"; // Import i18n configuration
-import { BrowserRouter, Route, Routes } from "react-router";
+import { HashRouter, Route, Routes } from "react-router";
+import NotFound from "./app/NotFound.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
-        <Route path="/:lang?/:store?" element={<App />} />
+        <Route path=":lang?/" element={<App />}>
+          <Route path="store/:storeId?" element={<App />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>
 );

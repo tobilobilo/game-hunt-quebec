@@ -1,4 +1,44 @@
-@mixin max-width {
+@use "./fonts.scss" as *;
+
+@mixin max-width-1 {
   max-width: 1600px;
   margin: 0 auto;
+}
+
+@mixin max-width-2 {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@mixin front-title {
+  @include geologica-400;
+  font-size: 1.1rem;
+  margin-bottom: .4rem;
+
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
+
+  i {
+    font-weight: 200;
+  }
+}
+
+@mixin link-hover-underlined {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    left: 0;
+    bottom: -3px;
+    transition: 0.4s all;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
 }
