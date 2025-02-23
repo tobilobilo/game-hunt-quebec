@@ -3,7 +3,6 @@ import "./Contact.scss";
 import icons from "/src/assets/svg/contact-icons.svg";
 import quebec from "/src/assets/svg/contact-quebec2.svg";
 import Button from "../ui/Button/Button";
-import { log } from "console";
 
 const Contact = () => {
   const { t } = useTranslation();
