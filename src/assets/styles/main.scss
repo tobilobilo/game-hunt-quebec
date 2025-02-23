@@ -51,27 +51,9 @@ body {
   }
 
   .btn {
-    @include geologica-300;
-    display: inline-block;
-    background-color: $blue-dark;
-    color: #fff;
-    padding: .2rem 1rem;
-    font-size: .8rem;
-    border-radius: 5px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s all;
-
     margin-top: 2rem;
 
-    &:hover {
-      background-color: $blue-dark-active;
-    }
-
     @media (min-width: 768px) {
-      font-size: .9rem;
-
       margin-top: 3rem;
     }
   }

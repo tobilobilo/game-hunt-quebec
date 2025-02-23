@@ -1,0 +1,53 @@
+@use "sass:color";
+
+.main-contact {
+  background-color: $blue-dark;
+  color: #fff;
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+.main-contact-content {
+  @include max-width-2;
+  position: relative;
+  text-align: center;
+  padding-bottom: 40px;
+
+  h3 {
+    margin: 42px auto 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    max-width: 400px;
+  }
+  p {
+    margin: 15px auto 0;
+    font-size: .8rem;
+    font-weight: 300;
+    max-width: 400px;
+  }
+  button {
+    margin: 30px auto 0;
+  }
+}
+
+.contact-quebec {
+  opacity: .8;
+  width: 539px;
+  position: absolute;
+  top: -260px;
+  left: 50%;
+  transform: translateX(-364px);
+  z-index: 0;
+}
+
+.contact-icons {
+  width: 277px;
+  margin: 20px auto 0;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .main-contact {
+    margin-top: 50px;
+  }
+}

@@ -4,6 +4,7 @@ import Header from "../components/Header/Header";
 import Banner from "../components/Banner/Banner";
 import { t } from "i18next";
 import { useAppNavigation } from "../hooks/useNavigation";
+import Button from "../components/ui/Button/Button";
 
 function NotFound() {
   //useLanguageRoute();
@@ -18,9 +19,7 @@ function NotFound() {
           <div className="notfound col-12">
             <h1>404</h1>
             <p>{t("notFound.text")}</p>
-            <button className="btn" onClick={goToHome}>
-              {t("notFound.backBtn")}
-            </button>
+            <Button textKey="notFound.backBtn" onClick={goToHome} />
           </div>
         </div>
       </div>

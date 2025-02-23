@@ -1,0 +1,42 @@
+@use "sass:color";
+
+.btn {
+  @include geologica-300;
+  display: inline-block;
+  background-color: $blue-dark;
+  color: #fff;
+  padding: .5rem 1rem;
+  font-size: .8rem;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s all;
+
+  &:hover {
+    background-color: $blue-dark-active;
+  }
+
+  @media (min-width: 768px) {
+    font-size: .9rem;
+  }
+
+  &.btn-white {
+    color: $blue-dark;
+    background-color: #fff;
+
+    &:hover {
+      color: $blue-dark-active;
+      background-color: #eaebf0;
+    }
+  }
+
+  &.btn-sm {
+    padding: .35rem .8rem;
+    font-size: .8rem;
+
+    @media (min-width: 768px) {
+      font-size: .9rem;
+    }
+  }
+}

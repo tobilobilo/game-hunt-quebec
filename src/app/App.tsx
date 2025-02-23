@@ -7,6 +7,7 @@ import Banner from "../components/Banner/Banner";
 import useLanguageRoute from "../hooks/useLanguageRoute";
 import Summary from "../components/Summary/Summary";
 import EventContainer from "../components/Event/EventContainer";
+import Contact from "../components/Contact/Contact";
 
 function App() {
   useLanguageRoute();
@@ -22,6 +23,7 @@ function App() {
             <Summary />
             <EventContainer />
           </div>
+          <Contact />
           <Footer />
         </div>
       </div>
