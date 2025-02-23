@@ -13,7 +13,13 @@
   },
   "events": {
     "title_one": "Événement à venir",
-    "title_other": "Événements à venir"
+    "title_other": "Événements à venir",
+    "more_details": "Plus de détails"
+  },
+  "contact": {
+    "title": "Vous aimeriez ajouter une adresse ou proposer une correction?",
+    "details": "Veuillez inscrire le plus de détails possible afin que je puisse bien traiter la demande.",
+    "button": "Contactez-moi!"
   },
   "notFound": {
     "text": "On dirait que vous avez perdu votre chemin...",
