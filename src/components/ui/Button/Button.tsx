@@ -5,16 +5,23 @@ interface Button {
   textKey: string;
   variant?: 'btn-white';
   size?: 'btn-sm';
-  onClick: () => void;
+  onClick?: () => void;
+  href?: string;
+  external?: boolean;
 }
 
-const Button: React.FC<Button> = ({textKey, onClick, variant='', size =''}) => {
+const Button: React.FC<Button> = ({textKey, onClick, href, external= false, variant='', size =''}) => {
   const { t } = useTranslation();
 
   return (
-    <button onClick={onClick} className={`btn ${variant} ${size}`}>
-      {t(textKey)}
-    </button>
+    <>
+      {href && <a href={href} className={`btn ${variant} ${size}`} target={external ? "_blank" : "_self"} rel={external ? "noopener noreferrer" : ""}>
+        {t(textKey)}
+      </a> }
+      {onClick && <button onClick={onClick} className={`btn ${variant} ${size}`}>
+        {t(textKey)}
+      </button> }
+    </>
   );
 };
 

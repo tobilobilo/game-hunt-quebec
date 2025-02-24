@@ -9,6 +9,9 @@
 
 .main-contact-content {
   @include max-width-2;
+}
+
+.main-contact-infos {
   position: relative;
   text-align: center;
   padding-bottom: 40px;
@@ -30,6 +33,12 @@
   }
 }
 
+.contact-img {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .contact-quebec {
   opacity: .8;
   width: 539px;
@@ -46,8 +55,41 @@
   display: block;
 }
 
-@media (min-width: 768px) {
-  .main-contact {
-    margin-top: 50px;
+@media (min-width: 840px) {
+  .main-contact-content {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+
+  .contact-quebec {
+    opacity: .29;
+    top: -325px;
+    transform: translateX(-272px);
+    width: 774px;
+  }
+
+  .contact-icons {
+    width: 299px;
+  }
+
+  .main-contact-infos {
+    text-align: left;
+    padding-bottom: 35px;
+
+    h3 {
+      margin-top: 28px;
+      font-size: 1.5rem;
+      max-width: 430px;
+    }
+    p {
+      margin-top: 20px;
+      font-size: .9rem;
+      max-width: 430px;
+    }
+    button {
+      margin-top: 24px;
+    }
   }
 }
