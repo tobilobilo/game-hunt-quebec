@@ -5,10 +5,13 @@ import Banner from "../components/Banner/Banner";
 import { t } from "i18next";
 import { useAppNavigation } from "../hooks/useNavigation";
 import Button from "../components/ui/Button/Button";
+import usePageTitle from "../hooks/usePageTitle";
+import Footer from "../components/Footer/Footer";
 
 function NotFound() {
-  //useLanguageRoute();
   const { goToHome } = useAppNavigation();
+
+  usePageTitle(`${t('title')} | 404`);
 
   return (
     <>
@@ -21,6 +24,7 @@ function NotFound() {
             <p>{t("notFound.text")}</p>
             <Button textKey="notFound.backBtn" onClick={goToHome} />
           </div>
+          <Footer />
         </div>
       </div>
     </>

@@ -8,9 +8,14 @@ import useLanguageRoute from "../hooks/useLanguageRoute";
 import Summary from "../components/Summary/Summary";
 import EventContainer from "../components/Event/EventContainer";
 import Contact from "../components/Contact/Contact";
+import usePageTitle from "../hooks/usePageTitle";
+import { useTranslation } from "react-i18next";
 
 function App() {
+  const { t } = useTranslation();
+
   useLanguageRoute();
+  usePageTitle(`${t('title')} | ${t('motto')}`);
 
   return (
     <>

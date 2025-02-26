@@ -19,7 +19,6 @@ const Contact = () => {
           <source srcSet={quebec} media='(min-width: 840px)' />
           <img src={quebecMobile} className="contact-img" alt="quebec" aria-hidden="true" draggable="false" />
         </picture>
-        {/*<img className="contact-quebec contact-img" srcSet={`${quebecMobile} 320w, ${quebec} 768w`} src={quebec} alt="quebec" aria-hidden="true" />*/}
         <img className="contact-icons contact-img" src={icons} alt="icons" aria-hidden="true" draggable="false" />
         <div className="main-contact-infos">
           <h3>{t("contact.title")}</h3>
