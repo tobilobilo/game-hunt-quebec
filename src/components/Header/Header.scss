@@ -55,9 +55,9 @@ header.main-header {
 
   .button {
     @include geologica-300;
-    @include link-hover-underlined;
+    @include link-hover-underlined(#fff);
     color: white;
-    padding: 0;
+    padding: 0 0 .1rem;
     border: 0;
     background-color: transparent;
     cursor: pointer;

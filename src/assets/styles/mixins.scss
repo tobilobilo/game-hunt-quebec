@@ -24,7 +24,7 @@
   }
 }
 
-@mixin link-hover-underlined {
+@mixin link-hover-underlined($borderColor) {
   position: relative;
 
   &:after {
@@ -32,9 +32,9 @@
     position: absolute;
     width: 0;
     height: 1px;
-    background-color: #fff;
+    background-color: $borderColor;
     left: 0;
-    bottom: -3px;
+    bottom: 0;
     transition: 0.4s all;
   }
 

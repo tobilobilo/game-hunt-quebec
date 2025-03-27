@@ -1,0 +1,66 @@
+@use "sass:color";
+
+.stores-container {
+  margin-top: 40px;
+  -webkit-box-shadow: 2px 2px 10px 1px rgba(0,35,94,0.2); 
+  box-shadow: 2px 2px 10px 1px rgba(0,35,94,0.2);
+
+  [role="tabpanel"] {
+    height: 100%;
+    width: 100%;
+  }
+
+  .stores-content {
+    position: relative;
+    height: 600px;
+  }
+
+  .nav-tab {
+    background-color: $blue-light;
+
+    nav {
+
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0 1.2rem;
+      display: flex;
+      flex-direction: row;
+    }
+
+    li {
+      
+    }
+
+    button {
+      display: block;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      color: #fff;
+      font: inherit;
+      font-weight: 300;
+      font-size: 1rem;
+      padding: .5rem 1.4rem;
+      transition: all 0.4s;
+
+      &[aria-selected="true"],
+      &:hover {
+        background-color: $blue-dark-active;
+      }
+
+      i {
+        margin-right: .25rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .stores-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
