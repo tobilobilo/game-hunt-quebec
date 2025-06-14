@@ -1,11 +1,21 @@
 {
   "title": "Le Bottin à Cassettes",
   "motto": "Le répertoire des boutiques de jeux vidéos du Québec",
+  "action": {
+    "close": "fermer"
+  },
   "header": {
     
   },
   "footer": {
     
+  },
+  "stores": {
+    "navtab": {
+      "labeling": "Type d'affichage des boutiques",
+      "map": "Carte",
+      "list": "Liste"
+    }
   },
   "summary": {
     "title": "La chasse est ouverte!",
