@@ -10,15 +10,21 @@ import Summary from "../components/Summary/Summary";
 import EventContainer from "../components/Event/EventContainer";
 import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
+import { useParams } from "react-router";
+import NotFound from "./NotFound";
+import { DataProvider } from "../contexts/DataContext";
 
 function App() {
   const { t } = useTranslation();
+  const { storeId } = useParams();
 
   useLanguageRoute();
   usePageTitle(`${t('title')} | ${t('motto')}`);
 
+  if(storeId === 'error') return <NotFound />
+
   return (
-    <>
+    <DataProvider>
       <div className="container-fluid">
         <div className="row">
           <Header />
@@ -32,7 +38,7 @@ function App() {
           <Footer />
         </div>
       </div>
-    </>
+    </DataProvider>
   );
 }
 

@@ -1,7 +1,11 @@
 import Masonry from 'react-masonry-css';
 import "./List.scss";
+import { useData } from '../../../contexts/DataContext';
+import ListStore from './ListStore/ListStore';
 
 const List = () => {
+  const { stores, loading } = useData();
+
   const breakpointCols = {
     default: 7,
     1700: 6,
@@ -19,11 +23,19 @@ const List = () => {
         columnClassName="masonry-grid_column"
       >
         <section className="mansonry-brick">
+          <h2>RealStores</h2>
+          <ul>
+            {stores && stores.map(store => (
+              <li><ListStore store={store} /></li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="mansonry-brick">
           <h2>Abery</h2>
           <ul>
-            <li><button>Walmart gers gs hesrh h hrjhshedsrhrd hgs hsr</button></li>
-            <li><button>Walmart</button></li>
-            <li><button>Target</button></li>
+            <li><a>Walmart gers gs hesrh h hrjhshedsrhrd hgs hsr</a></li>
+            <li><a>Walmart</a></li>
             <li><button>Target</button></li>
             <li><button>Target</button></li>
             <li><button>Best Buy</button></li>

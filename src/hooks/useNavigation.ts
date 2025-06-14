@@ -19,13 +19,17 @@ export const useAppNavigation = () => {
     navigate(`/${i18n.language}`);
   };
 
+  const getStorePath = (id: string): string => {
+    return `/${i18n.language}/store/${id}`;
+  }
+
   const goToStore = (id: string): void => {
-    navigate(`/store/${id}`);
+    navigate(getStorePath(id));
   };
 
   const goToNotFound = (): void => {
     navigate('*');
   };
 
-  return { changeLanguage, goToHome, goToStore, goToNotFound };
+  return { changeLanguage, goToHome, getStorePath, goToStore, goToNotFound };
 };

@@ -10,6 +10,46 @@
     width: 100%;
   }
 
+  .store-loader {
+    animation: loaderSpining .8s steps(1, end) infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: $blue-light;
+  }
+
+  @keyframes loaderSpining {
+    0% {
+      transform: rotate(45deg);
+    }
+    12.5% {
+      transform: rotate(90deg);
+    }
+    25% {
+      transform: rotate(135deg);
+    }
+    37.5% {
+      transform: rotate(180deg);
+    }
+    50% {
+      transform: rotate(225deg);
+    }
+    67.5% {
+      transform: rotate(270deg);
+    }
+    75% {
+      transform: rotate(315deg);
+    }
+    87.5% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
   .stores-content {
     position: relative;
     height: 600px;
