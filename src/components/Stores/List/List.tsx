@@ -4,7 +4,7 @@ import { useData } from '../../../contexts/DataContext';
 import ListStore from './ListStore/ListStore';
 
 const List = () => {
-  const { stores, loading } = useData();
+  const { stores } = useData();
 
   const breakpointCols = {
     default: 7,

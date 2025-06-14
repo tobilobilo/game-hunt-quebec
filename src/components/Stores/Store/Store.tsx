@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./Store.scss";
 import Button from "../../ui/Button/Button";
 import { useTranslation } from "react-i18next";

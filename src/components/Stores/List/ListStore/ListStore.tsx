@@ -3,7 +3,6 @@ import "./ListStore.scss";
 import { Link } from "react-router";
 import { useAppNavigation } from "../../../../hooks/useNavigation";
 import { useTranslation } from "react-i18next";
-import { useData } from "../../../../contexts/DataContext";
 
 const ListStore = ({store}: any) => {
   //const { stores, loading } = useData();
