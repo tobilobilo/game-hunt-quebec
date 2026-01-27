@@ -1,0 +1,161 @@
+{
+    "countries": [
+        {
+            "code": "CA",
+            "name": {
+                "fr": "Canada",
+                "en": "Canada"
+            }
+        },
+        {
+            "code": "US",
+            "name": {
+                "fr": "États-Unis",
+                "en": "United States"
+            }
+        }
+    ],
+    "regions": {
+        "CA": [
+            {
+                "code": "QC",
+                "name": {
+                    "fr": "Québec",
+                    "en": "Quebec"
+                }
+            },
+            {
+                "code": "ON",
+                "name": {
+                    "fr": "Ontario",
+                    "en": "Ontario"
+                }
+            }
+        ],
+        "US": [
+        ]
+    },
+    "zones": {
+        "QC": [
+            {
+                "code": 1,
+                "name": {
+                    "fr": "Abitibi-Témiscamingue",
+                    "en": ""
+                }
+            },
+            {
+                "code": 2,
+                "name": {
+                    "fr": "Bas-Saint-Laurent",
+                    "en": ""
+                }
+            },
+            {
+                "code": 3,
+                "name": {
+                    "fr": "Capitale-Nationale",
+                    "en": ""
+                }
+            },
+            {
+                "code": 4,
+                "name": {
+                    "fr": "Centre-du-Québec",
+                    "en": ""
+                }
+            },
+            {
+                "code": 5,
+                "name": {
+                    "fr": "Chaudière-Appalaches",
+                    "en": ""
+                }
+            },
+            {
+                "code": 6,
+                "name": {
+                    "fr": "Côte-Nord",
+                    "en": ""
+                }
+            },
+            {
+                "code": 7,
+                "name": {
+                    "fr": "Estrie",
+                    "en": ""
+                }
+            },
+            {
+                "code": 8,
+                "name": {
+                    "fr": "Gaspésie-Îles-de-la-Madeleine",
+                    "en": ""
+                }
+            },
+            {
+                "code": 9,
+                "name": {
+                    "fr": "Lanaudière",
+                    "en": ""
+                }
+            },
+            {
+                "code": 10,
+                "name": {
+                    "fr": "Laurentides",
+                    "en": ""
+                }
+            },
+            {
+                "code": 11,
+                "name": {
+                    "fr": "Laval",
+                    "en": ""
+                }
+            },
+            {
+                "code": 12,
+                "name": {
+                    "fr": "Mauricie",
+                    "en": ""
+                }
+            },
+            {
+                "code": 13,
+                "name": {
+                    "fr": "Montérégie",
+                    "en": ""
+                }
+            },
+            {
+                "code": 14,
+                "name": {
+                    "fr": "Montréal",
+                    "en": ""
+                }
+            },
+            {
+                "code": 15,
+                "name": {
+                    "fr": "Nord-du-Québec",
+                    "en": ""
+                }
+            },
+            {
+                "code": 16,
+                "name": {
+                    "fr": "Outaouais",
+                    "en": ""
+                }
+            },
+            {
+                "code": 17,
+                "name": {
+                    "fr": "Saguenay-Lac-Saint-Jean",
+                    "en": ""
+                }
+            }
+        ]
+    }
+}
