@@ -21,7 +21,7 @@ const Map = () => {
         <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         {/* Additional map layers or components can be added here */}
         { stores && stores.map( store => (
-          <Marker position={store.position}>
+          <Marker position={store.position} key={store.slug}>
             <Popup>
               <Link to={getStorePath(store.slug)} className="popup-link">{ store.name }</Link>
             </Popup>

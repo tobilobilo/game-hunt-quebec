@@ -15,7 +15,20 @@
       "labeling": "Stores list view type",
       "map": "Map",
       "list": "List"
-    }
+    },
+    "ctas": {
+      "website": "Website",
+      "directions": "Directions"
+    },
+    "features": {
+      "feature-0": "Online store",
+      "feature-1": "We buy used games",
+      "feature-2": "Repair",
+      "feature-3": "Disc resurfacing",
+      "feature-4": "Battery replacement"
+    },
+    "error_data": "Error loading store data",
+    "image_alt": "Picture of the store"
   },
   "summary": {
     "title": "The hunt is on!",

@@ -15,7 +15,20 @@
       "labeling": "Type d'affichage des boutiques",
       "map": "Carte",
       "list": "Liste"
-    }
+    },
+    "ctas": {
+      "website": "Site Web",
+      "directions": "Itinéraire"
+    },
+    "features": {
+      "feature-0": "Boutique en ligne",
+      "feature-1": "Achat de jeux",
+      "feature-2": "Réparation",
+      "feature-3": "Resurfaçage",
+      "feature-4": "Remplacement de batterie"
+    },
+    "error_data": "Erreur lors du chargement des données des boutiques",
+    "image_alt": "Photo de la boutique"
   },
   "summary": {
     "title": "La chasse est ouverte!",
