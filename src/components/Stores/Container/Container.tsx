@@ -7,9 +7,11 @@ import "./Container.scss";
 import { faListUl, faLocationDot, faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useData } from "../../../contexts/DataContext";
+import { useTranslation } from "react-i18next";
 
 const StoreContainer = () => {
-  const { loading } = useData();
+  const { t } = useTranslation();
+  const { loading, error } = useData();
   const [view, setView] = useState(0);
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const enableFocusOnTabs = useRef(false);
@@ -65,7 +67,11 @@ const StoreContainer = () => {
         
         <div className="stores-content" >
           {loading && <FontAwesomeIcon icon={faSpinner} className="store-loader" />}
-          {!loading &&
+          {error && <div className="data-error">
+            <p><strong>{t("stores.error_data")}</strong></p>
+            <p><em>{error}</em></p>
+          </div>}
+          {!loading && !error &&
             tabs.map((tab, index) => (
               view === index ? (
                 <div key={tab.id} id={`tabpanel-${index}`} role="tabpanel" aria-labelledby={`tabnav-${index}`}>{tab.component}</div>

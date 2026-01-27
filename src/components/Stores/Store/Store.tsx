@@ -1,40 +1,67 @@
 import "./Store.scss";
-import Button from "../../ui/Button/Button";
 import { useTranslation } from "react-i18next";
-import { useParams } from "react-router";
 import { useAppNavigation } from "../../../hooks/useNavigation";
+import { useStore } from "../../../hooks/useStore";
+import { getLabel } from "../../../utils/label";
+import Ctas from "./Ctas";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { getAddress } from "../../../utils/store";
+import Features from "./Features";
+
 
 const Store = () => {
   const { t } = useTranslation();
-  const { storeId } = useParams();
   const { goToHome } = useAppNavigation();
+  const { store } = useStore();
+  const { i18n } = useTranslation();
 
   function suggestChange() {
-    console.log('suggest change')
+    console.log('suggest change TODO')
   }
-
-  if(!storeId) return;
 
   return (
     <>
-      {storeId && <div className="store-overlay">
+      {store && <div className="store-overlay">
         <section className="store-content">
           <div className="store-close-wrapper">
             <button className="store-close" onClick={goToHome} aria-label={t("action.close")}>×</button>
           </div>
           <div className="store-info-wrapper">
-            <img src="https://baconmockup.com/800/200" alt="placeholder" className="store-img" />
+            <div className="store-img-wrapper">
+              { store?.image && <img src={store?.image} alt={t("stores.image_alt")} className="store-img" /> }
+            </div>
             <div className="store-info">
-              <h1>Retro MTL</h1>
-              <span className="adress">4023 Rue Hochelaga, Montréal, QC H1W 1K4</span>
-              <p className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac diam tellus. Praesent lobortis ex quis ante tincidunt imperdiet at ac ligula. Vivamus id justo vel nisi ultrices convallis at ac dui.</p>
-              <p className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac diam tellus. Praesent lobortis ex quis ante tincidunt imperdiet at ac ligula. Vivamus id justo vel nisi ultrices convallis at ac dui.</p>
-              <p className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac diam tellus. Praesent lobortis ex quis ante tincidunt imperdiet at ac ligula. Vivamus id justo vel nisi ultrices convallis at ac dui.</p>
-              <p className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac diam tellus. Praesent lobortis ex quis ante tincidunt imperdiet at ac ligula. Vivamus id justo vel nisi ultrices convallis at ac dui.</p>
-              <p className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac diam tellus. Praesent lobortis ex quis ante tincidunt imperdiet at ac ligula. Vivamus id justo vel nisi ultrices convallis at ac dui.</p>
-              <div className="store-ctas">
-                <Button href="#" textKey="Site Web" size="btn-sm" />
-              </div>
+              <div className="store-info-top">
+                <div>
+                  { store?.name && 
+                    <h1>{store?.name}</h1>
+                  }
+                  { getAddress(store) && 
+                    <p className="address">
+                      { getAddress(store) }
+                    </p>
+                  }
+                  { store?.phone && 
+                    <p className="phone">
+                      <FontAwesomeIcon icon={faPhone} />&nbsp; {store?.phone}
+                    </p>
+                  }
+                </div>
+                <div>
+                  <Ctas />
+                </div>
+              </div>             
+
+              <Features />
+              
+              { store?.description && 
+                <p className="description">
+                  {getLabel(store?.description, i18n.language)}
+                </p>
+              }
+
+              
               <button className="suggest-change" onClick={suggestChange}>Proposer un changement pour cette boutique</button>
             </div>
           </div>

@@ -2,9 +2,12 @@ import Masonry from 'react-masonry-css';
 import "./List.scss";
 import { useData } from '../../../contexts/DataContext';
 import ListStore from './ListStore/ListStore';
+import { getLabel } from '../../../utils/label';
+import { useTranslation } from 'react-i18next';
 
 const List = () => {
-  const { stores } = useData();
+  const { stores, places } = useData();
+  const { i18n } = useTranslation();
 
   const breakpointCols = {
     default: 7,
@@ -14,6 +17,9 @@ const List = () => {
     800: 3,
     600: 2,
   };
+
+       console.log(places?.zones['QC']);
+
 
   return (
     <div id="list">
@@ -26,10 +32,21 @@ const List = () => {
           <h2>RealStores</h2>
           <ul>
             {stores && stores.map(store => (
-              <li><ListStore store={store} /></li>
+              <li key={store.slug}><ListStore store={store} /></li>
             ))}
           </ul>
         </section>
+
+        {
+          places && places.zones['QC'].map((zone, index) => (
+            <section className="mansonry-brick">
+              <h2>{getLabel(zone.name, i18n.language)} {i18n.language}</h2>
+              <ul>
+                <li><a>TODO</a></li>
+              </ul>
+            </section>
+          ))
+        }
 
         <section className="mansonry-brick">
           <h2>Abery</h2>

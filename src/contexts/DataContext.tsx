@@ -1,35 +1,46 @@
-import { LatLngExpression } from "leaflet";
 import { createContext, ReactNode, useContext, useEffect, useState } from "react";
-
-type Store = {
-  name: string,
-  slug: string,
-  position: LatLngExpression,
-};
+import { Store } from "../types/store";
+import { Places } from "../types/places";
 
 type DataContextType = {
   stores: Store[] | null;
+  places: Places | null;
   loading: boolean;
   error: string | null;
 };
-
 
 const DataContext = createContext<DataContextType | undefined>(undefined);
 
 export const DataProvider = ({ children }: { children: ReactNode }) => {
   const [stores, setStores] = useState<Store[] | null>(null);
+  const [places, setPlaces] = useState<Places | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    /* const fetchUser = async () => {
+    const fetchStores = async () => {
       try {
         setLoading(true);
         setError(null);
-        const res = await fetch('/api/me'); // <- Replace with your endpoint
-        if (!res.ok) throw new Error('Failed to fetch user');
-        const data: User = await res.json();
-        setUser(data);
+        const res = await fetch('/data/stores.json');
+        if (!res.ok) throw new Error('Failed to fetch store data');
+        const data: Store[] = await res.json();
+        setStores(data);
+      } catch (err: any) {
+        setError(err.message || 'Unknown error');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    const fetchPlaces = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        const res = await fetch('/data/places.json');
+        if (!res.ok) throw new Error('Failed to fetch places data');
+        const data: Places = await res.json();
+        setPlaces(data);
       } catch (err: any) {
         setError(err.message || 'Unknown error');
       } finally {
@@ -37,29 +48,12 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
       }
     };
   
-    fetchUser(); */
-
-    const tempStores: Store[] = [
-    {
-      name: "Retro MTL",
-      slug: "retro-mtl",
-      position: [45.5520502, -73.5513515]
-    },
-    {
-      name: "Coin Game Over (Le)",
-      slug: "coin-game-over",
-      position: [45.500548,-73.426426]
-    }
-  ];
-
-    setTimeout(() => { // fake loading
-      setLoading(false);
-      setStores(tempStores);
-    }, 2000);
+    fetchStores();
+    fetchPlaces();
   }, []);
 
   return (
-    <DataContext.Provider value={{ stores, loading, error }}>
+    <DataContext.Provider value={{ stores, places, loading, error }}>
       {children}
     </DataContext.Provider>
   );
