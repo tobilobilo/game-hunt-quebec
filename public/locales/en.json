@@ -20,6 +20,10 @@
       "website": "Website",
       "directions": "Directions"
     },
+    "list": {
+      "elsewhere_canada": "Elsewhere in Canada",
+      "elsewhere_usa": "In USA"
+    },
     "features": {
       "feature-0": "Online store",
       "feature-1": "We buy used games",

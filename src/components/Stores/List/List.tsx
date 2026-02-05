@@ -1,13 +1,12 @@
 import Masonry from 'react-masonry-css';
 import "./List.scss";
 import { useData } from '../../../contexts/DataContext';
-import ListStore from './ListStore/ListStore';
 import { getLabel } from '../../../utils/label';
-import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
+import ListBrick from './ListBrick';
 
 const List = () => {
   const { stores, places } = useData();
-  const { i18n } = useTranslation();
 
   const breakpointCols = {
     default: 7,
@@ -18,121 +17,67 @@ const List = () => {
     600: 2,
   };
 
-       console.log(places?.zones['QC']);
+  const masonryProps = {
+    breakpointCols,
+    className: "masonry-grid",
+    columnClassName: "masonry-grid_column",
+  };
 
+  const orderedQcZones = places?.zones['QC'].sort((a, b) => a.name.localeCompare(b.name));
+  const storesQc = stores?.filter(store => store?.address?.region === 'QC').sort((a, b) => a.name.localeCompare(b.name));
+
+  const orderedCanRegions = places?.regions['CA'].filter(region => region.code !== 'QC').sort((a, b) => getLabel(a.name, i18next.language).localeCompare(getLabel(b.name, i18next.language)));
+  const storesCan = stores?.filter(store => {
+    return store?.address?.country == 'CA' && store?.address?.region && store?.address?.region !== 'QC'
+  }).sort((a, b) => a.name.localeCompare(b.name));
+
+  const orderedUsRegions = places?.regions['US'].sort((a, b) => getLabel(a.name, i18next.language).localeCompare(getLabel(b.name, i18next.language)));
+  const storesUs = stores?.filter(store => store?.address?.country == 'US').sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <div id="list">
-      <Masonry
-        breakpointCols={breakpointCols}
-        className="masonry-grid"
-        columnClassName="masonry-grid_column"
-      >
-        <section className="mansonry-brick">
-          <h2>RealStores</h2>
-          <ul>
-            {stores && stores.map(store => (
-              <li key={store.slug}><ListStore store={store} /></li>
-            ))}
-          </ul>
-        </section>
-
-        {
-          places && places.zones['QC'].map((zone, index) => (
-            <section className="mansonry-brick">
-              <h2>{getLabel(zone.name, i18n.language)} {i18n.language}</h2>
-              <ul>
-                <li><a>TODO</a></li>
-              </ul>
-            </section>
-          ))
+      <Masonry {...masonryProps}>
+        { // Quebec
+          orderedQcZones && orderedQcZones.map((zone, index) => {
+            const storesInZone = storesQc?.filter(store => store.address.zone === zone.code);
+            return storesQc && storesInZone && storesInZone.length > 0 && (
+              <ListBrick name={zone.name} stores={storesQc?.filter(store => store.address.zone === zone.code)} key={`brick-1-${index}`} />
+            )
+          })
         }
-
-        <section className="mansonry-brick">
-          <h2>Abery</h2>
-          <ul>
-            <li><a>Walmart gers gs hesrh h hrjhshedsrhrd hgs hsr</a></li>
-            <li><a>Walmart</a></li>
-            <li><button>Target</button></li>
-            <li><button>Target</button></li>
-            <li><button>Best Buy</button></li>
-            <li><button>Best Buy</button></li>
-            <li><button>Best Buy</button></li>
-          </ul>
-        </section>
-
-        <section className="mansonry-brick">
-          <h2>Cameron</h2>
-          <ul>
-            <li><button>Canadian Tire</button></li>
-            <li><button>Hudson's Bay</button></li>
-            <li><button>RBC Store</button></li>
-          </ul>
-        </section>
-
-        <section className="mansonry-brick">
-          <h2>Foudra</h2>
-          <ul>
-            <li><button>Walmart</button></li>
-            <li><button>Walmart</button></li>
-            <li><button>Target</button></li>
-            <li><button>Target</button></li>
-            <li><button>Best Buy</button></li>
-            <li><button>Best Buy</button></li>
-          </ul>
-        </section>
-
-        <section className="mansonry-brick">
-          <h2>Montréal</h2>
-          <ul>
-            <li><button>Canadian Tire</button></li>
-            <li><button>Hudson's Bay</button></li>
-            <li><button>Hudson's Bay</button></li>
-            <li><button>Hudson's Bay</button></li>
-            <li><button>Hudson's Bay</button></li>
-            <li><button>RBC Store</button></li>
-          </ul>
-        </section>
-
-        <section className="mansonry-brick">
-          <h2>Portus</h2>
-          <ul>
-            <li><button>Walmart</button></li>
-            <li><button>Target</button></li>
-            <li><button>Best Buy</button></li>
-          </ul>
-        </section>
-
-        <section className="mansonry-brick">
-          <h2>Sapone</h2>
-          <ul>
-            <li><button>Canadian Tire</button></li>
-            <li><button>Hudson's Bay</button></li>
-            <li><button>RBC Store</button></li>
-          </ul>
-        </section>
-
-        <section className="mansonry-brick">
-          <h2>Terevar</h2>
-          <ul>
-            <li><button>Walmart</button></li>
-            <li><button>Target</button></li>
-            <li><button>Target</button></li>
-            <li><button>Target</button></li>
-            <li><button>Target</button></li>
-            <li><button>Best Buy</button></li>
-          </ul>
-        </section>
-
-        <section className="mansonry-brick">
-          <h2>Yuza</h2>
-          <ul>
-            <li><button>Canadian Tire</button></li>
-            <li><button>Hudson's Bay</button></li>
-            <li><button>RBC Store</button></li>
-          </ul>
-        </section>
       </Masonry>
+      
+      {storesCan && storesCan.length > 0 && (
+        <div className="list-section">
+          <h3>{i18next.t('stores.list.elsewhere_canada')}</h3>
+          <Masonry {...masonryProps}>
+            { // Other provinces
+              orderedCanRegions && orderedCanRegions.map((region, index) => {
+                const storesInRegion = storesCan?.filter(store => store?.address?.region === region.code);
+                return storesInRegion && storesInRegion.length > 0 && (
+                  <ListBrick name={getLabel(region?.name, i18next.language)} stores={storesInRegion} key={`brick-2-${index}`} />
+                )
+              })
+            }
+          </Masonry>
+        </div>
+      )}
+
+      {storesUs && storesUs.length > 0 && (
+        <div className="list-section">
+          <h3>{i18next.t('stores.list.elsewhere_usa')}</h3>
+          <Masonry {...masonryProps}>
+            { // In USA
+              orderedUsRegions && orderedUsRegions.map((region, index) => {
+                const storesInRegion = storesUs?.filter(store => store?.address?.region === region.code);
+                return storesInRegion && storesInRegion.length > 0 && (
+                  <ListBrick name={getLabel(region?.name, i18next.language)} stores={storesInRegion} key={`brick-3-${index}`} />
+                )
+              })
+            }
+          </Masonry>
+        </div>
+      )}
     </div>
   );
 };

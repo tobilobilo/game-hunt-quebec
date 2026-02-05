@@ -18,7 +18,7 @@ export type Regions = Record<CountryCode, Region[]>;
 
 export type Zone = {
     code: number,
-    name: Label
+    name: string
 }
 
 export type Zones = Record<RegionCode, Zone[]>;

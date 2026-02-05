@@ -27,6 +27,10 @@
       "feature-3": "Resurfaçage",
       "feature-4": "Remplacement de batterie"
     },
+    "list": {
+      "elsewhere_canada": "Ailleurs au Canada",
+      "elsewhere_usa": "Aux États-Unis"
+    },
     "error_data": "Erreur lors du chargement des données des boutiques",
     "image_alt": "Photo de la boutique"
   },

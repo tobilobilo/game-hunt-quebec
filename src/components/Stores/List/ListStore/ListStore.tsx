@@ -5,7 +5,6 @@ import { useAppNavigation } from "../../../../hooks/useNavigation";
 import { useTranslation } from "react-i18next";
 
 const ListStore = ({store}: any) => {
-  //const { stores, loading } = useData();
   const { getStorePath } = useAppNavigation();
   const { i18n } = useTranslation();
 

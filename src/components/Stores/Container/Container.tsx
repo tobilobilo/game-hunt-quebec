@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { t } from "i18next";
 import List from "../List/List";
 import Map from "../Map/Map";
 import Store from "../Store/Store";
