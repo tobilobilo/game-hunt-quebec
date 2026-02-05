@@ -1,10 +1,22 @@
 import { useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerIconRetina from "leaflet/dist/images/marker-icon-2x.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import "leaflet/dist/leaflet.css";
 import "./Map.scss";
 import { Link } from "react-router";
 import { useAppNavigation } from "../../../hooks/useNavigation";
 import { useData } from "../../../contexts/DataContext";
+
+// Fix Leaflet icon paths for bundled assets
+delete (L.Icon.Default.prototype as any)._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconUrl: markerIcon,
+  iconRetinaUrl: markerIconRetina,
+  shadowUrl: markerShadow,
+});
 
 const Map = () => {
   const { getStorePath } = useAppNavigation();
