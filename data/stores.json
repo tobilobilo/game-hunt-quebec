@@ -13,9 +13,110 @@
         "address": {
             "street": "4023 rue Hochelaga",
             "city": "Montréal",
-            "zone": 14,
+            "zone": 6,
             "region": "QC",
             "country": "CA"
+        },
+        "features": [0, 1, 2, 3, 4],
+        "closed": 0
+    },
+    {
+        "name": "Retro Ontario",
+        "slug": "retro-ontario",
+        "position": [45.5322502, -73.5614515],
+        "image": "https://baconmockup.com/800/200",
+        "description": {
+            "fr": "Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes.",
+            "en": "A store specializing in retro video games and classic consoles. Come discover a wide selection of games for all old platforms."
+        },
+        "phone": "(514) 759-7179",
+        "website": "https://retromtl.com/",
+        "address": {
+            "street": "4023 rue Hochelaga",
+            "city": "Montréal",
+            "zone": 6,
+            "region": "ON",
+            "country": "CA"
+        },
+        "features": [0, 1, 2, 3, 4],
+        "closed": 0
+    },
+    {
+        "name": "Retro NB",
+        "slug": "retro-nb",
+        "position": [45.5322502, -73.5614515],
+        "image": "https://baconmockup.com/800/200",
+        "description": {
+            "fr": "Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes.",
+            "en": "A store specializing in retro video games and classic consoles. Come discover a wide selection of games for all old platforms."
+        },
+        "phone": "(514) 759-7179",
+        "website": "https://retromtl.com/",
+        "address": {
+            "street": "4023 rue Hochelaga",
+            "city": "Montréal",
+            "region": "NB",
+            "country": "CA"
+        },
+        "features": [0, 1, 2, 3, 4],
+        "closed": 0
+    },
+    {
+        "name": "Retro VT",
+        "slug": "retro-vt",
+        "position": [45.5322502, -73.5614515],
+        "image": "https://baconmockup.com/800/200",
+        "description": {
+            "fr": "Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes.",
+            "en": "A store specializing in retro video games and classic consoles. Come discover a wide selection of games for all old platforms."
+        },
+        "phone": "(514) 759-7179",
+        "website": "https://retromtl.com/",
+        "address": {
+            "street": "4023 rue Hochelaga",
+            "city": "Montréal",
+            "region": "VT",
+            "country": "US"
+        },
+        "features": [0, 1, 2, 3, 4],
+        "closed": 0
+    },
+    {
+        "name": "Retro NY",
+        "slug": "retro-ny",
+        "position": [45.5322502, -73.5614515],
+        "image": "https://baconmockup.com/800/200",
+        "description": {
+            "fr": "Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes.",
+            "en": "A store specializing in retro video games and classic consoles. Come discover a wide selection of games for all old platforms."
+        },
+        "phone": "(514) 759-7179",
+        "website": "https://retromtl.com/",
+        "address": {
+            "street": "4023 rue Hochelaga",
+            "city": "Montréal",
+            "region": "NY",
+            "country": "US"
+        },
+        "features": [0, 1, 2, 3, 4],
+        "closed": 0
+    },
+    {
+        "name": "Retro ME",
+        "slug": "retro-me",
+        "position": [45.5322502, -73.5614515],
+        "image": "https://baconmockup.com/800/200",
+        "description": {
+            "fr": "Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes. Boutique spécialisée dans les jeux vidéo rétro et les consoles classiques. Venez découvrir une vaste sélection de jeux pour toutes les plateformes anciennes.",
+            "en": "A store specializing in retro video games and classic consoles. Come discover a wide selection of games for all old platforms."
+        },
+        "phone": "(514) 759-7179",
+        "website": "https://retromtl.com/",
+        "address": {
+            "street": "4023 rue Hochelaga",
+            "city": "Montréal",
+            "region": "ME",
+            "country": "US"
         },
         "features": [0, 1, 2, 3, 4],
         "closed": 0

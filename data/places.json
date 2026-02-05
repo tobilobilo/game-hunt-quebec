@@ -30,131 +30,108 @@
                     "fr": "Ontario",
                     "en": "Ontario"
                 }
+            },
+            {
+                "code": "NB",
+                "name": {
+                    "fr": "Nouveau-Brunswick",
+                    "en": "New Brunswick"
+                }
             }
         ],
         "US": [
+            {
+                "code": "ME",
+                "name": {
+                    "fr": "Maine",
+                    "en": "Maine"
+                }
+            },
+            {
+                "code": "VT",
+                "name": {
+                    "fr": "Vermont",
+                    "en": "Vermont"
+                }
+            },
+            {
+                "code": "NY",
+                "name": {
+                    "fr": "New York",
+                    "en": "New York"
+                }
+            }
         ]
     },
     "zones": {
         "QC": [
             {
                 "code": 1,
-                "name": {
-                    "fr": "Abitibi-Témiscamingue",
-                    "en": ""
-                }
+                "name": "Bas-Saint-Laurent"
             },
             {
                 "code": 2,
-                "name": {
-                    "fr": "Bas-Saint-Laurent",
-                    "en": ""
-                }
+                "name": "Saguenay-Lac-Saint-Jean"
             },
             {
                 "code": 3,
-                "name": {
-                    "fr": "Capitale-Nationale",
-                    "en": ""
-                }
+                "name": "Capitale-Nationale"
             },
             {
                 "code": 4,
-                "name": {
-                    "fr": "Centre-du-Québec",
-                    "en": ""
-                }
+                "name": "Mauricie"
             },
             {
                 "code": 5,
-                "name": {
-                    "fr": "Chaudière-Appalaches",
-                    "en": ""
-                }
+                "name": "Estrie"
             },
             {
                 "code": 6,
-                "name": {
-                    "fr": "Côte-Nord",
-                    "en": ""
-                }
+                "name": "Montréal"
             },
             {
                 "code": 7,
-                "name": {
-                    "fr": "Estrie",
-                    "en": ""
-                }
+                "name": "Outaouais"
             },
             {
                 "code": 8,
-                "name": {
-                    "fr": "Gaspésie-Îles-de-la-Madeleine",
-                    "en": ""
-                }
+                "name": "Abitibi-Témiscamingue"
             },
             {
                 "code": 9,
-                "name": {
-                    "fr": "Lanaudière",
-                    "en": ""
-                }
+                "name": "Côte-Nord"
             },
             {
                 "code": 10,
-                "name": {
-                    "fr": "Laurentides",
-                    "en": ""
-                }
+                "name": "Nord-du-Québec"
             },
             {
                 "code": 11,
-                "name": {
-                    "fr": "Laval",
-                    "en": ""
-                }
+                "name": "Gaspésie-Îles-de-la-Madeleine"
             },
             {
                 "code": 12,
-                "name": {
-                    "fr": "Mauricie",
-                    "en": ""
-                }
+                "name": "Chaudière-Appalaches"
             },
             {
                 "code": 13,
-                "name": {
-                    "fr": "Montérégie",
-                    "en": ""
-                }
+                "name": "Laval"
             },
             {
                 "code": 14,
-                "name": {
-                    "fr": "Montréal",
-                    "en": ""
-                }
+                "name": "Lanaudière"
             },
             {
                 "code": 15,
-                "name": {
-                    "fr": "Nord-du-Québec",
-                    "en": ""
-                }
+                "name": "Laurentides"
             },
             {
                 "code": 16,
-                "name": {
-                    "fr": "Outaouais",
-                    "en": ""
-                }
+                "name": "Montérégie"
             },
             {
                 "code": 17,
-                "name": {
-                    "fr": "Saguenay-Lac-Saint-Jean",
-                    "en": ""
-                }
+                "name": "Centre-du-Québec"
             }
         ]
     }
