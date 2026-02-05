@@ -1,6 +1,7 @@
 import { createContext, ReactNode, useContext, useEffect, useState } from "react";
 import { Store } from "../types/store";
 import { Places } from "../types/places";
+import { basename } from "../utils/path";
 
 type DataContextType = {
   stores: Store[] | null;
@@ -22,7 +23,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
       try {
         setLoading(true);
         setError(null);
-        const res = await fetch('/data/stores.json');
+        const res = await fetch(basename().concat('/data/stores.json'));
         if (!res.ok) throw new Error('Failed to fetch store data');
         const data: Store[] = await res.json();
         setStores(data);
@@ -37,7 +38,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
       try {
         setLoading(true);
         setError(null);
-        const res = await fetch('/data/places.json');
+        const res = await fetch(basename().concat('/data/places.json'));
         if (!res.ok) throw new Error('Failed to fetch places data');
         const data: Places = await res.json();
         setPlaces(data);
