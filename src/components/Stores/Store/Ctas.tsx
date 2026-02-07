@@ -8,7 +8,6 @@ const Ctas = () => {
   const { t } = useTranslation();
   const { store } = useStore();
 
-
   return (
     <>
       <div className="store-ctas">

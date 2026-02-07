@@ -41,7 +41,8 @@
   "events": {
     "title_one": "Événement à venir",
     "title_other": "Événements à venir",
-    "more_details": "Plus de détails"
+    "more_details": "Plus de détails",
+    "no_events": "Rien à l'horizon..."
   },
   "contact": {
     "title": "Vous aimeriez ajouter une adresse ou proposer une correction?",

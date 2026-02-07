@@ -1,10 +1,13 @@
 import { useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import MarkerClusterGroup from 'react-leaflet-markercluster';
 import L from "leaflet";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerIconRetina from "leaflet/dist/images/marker-icon-2x.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import "leaflet/dist/leaflet.css";
+import "leaflet.markercluster/dist/MarkerCluster.css";
+import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 import "./Map.scss";
 import { Link } from "react-router";
 import { useAppNavigation } from "../../../hooks/useNavigation";
@@ -31,14 +34,16 @@ const Map = () => {
     <div id="map">
       <MapContainer center={[latitude, longitude]} zoom={11} ref={mapRef} style={{ height: "100%", width: "100%" }} scrollWheelZoom={false}>
         <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-        {/* Additional map layers or components can be added here */}
-        { stores && stores.map( store => (
-          <Marker position={store.position} key={store.slug}>
-            <Popup>
-              <Link to={getStorePath(store.slug)} className="popup-link">{ store.name }</Link>
-            </Popup>
-          </Marker>
-        ))}
+        <MarkerClusterGroup>
+          {/* Additional map layers or components can be added here */}
+          { stores && stores.map( store => (
+            <Marker position={store.position} key={store.slug}>
+              <Popup>
+                <Link to={getStorePath(store.slug)} className="popup-link">{ store.name }</Link>
+              </Popup>
+            </Marker>
+          ))}
+        </MarkerClusterGroup>
       </MapContainer>
     </div>
   );

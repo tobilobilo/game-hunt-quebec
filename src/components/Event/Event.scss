@@ -23,6 +23,11 @@
       img {
         align-self: flex-start;
         width: 100%;
+        max-width: 275px;
+      }
+
+      &+.event {
+        margin-top: 3rem;
       }
     }
 

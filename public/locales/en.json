@@ -41,7 +41,8 @@
   "events": {
     "title_one": "Upcoming event",
     "title_other": "Upcoming events",
-    "more_details": "More details"
+    "more_details": "More details",
+    "no_events": " Nothing on the horizon..."
   },
   "contact": {
     "title": "EN: Vous aimeriez ajouter une adresse ou proposer une correction?",
