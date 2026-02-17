@@ -16,13 +16,17 @@
       "map": "Map",
       "list": "List"
     },
-    "ctas": {
-      "website": "Website",
-      "directions": "Directions"
-    },
     "list": {
       "elsewhere_canada": "Elsewhere in Canada",
       "elsewhere_usa": "In USA"
+    },
+    "error_data": "Error loading store data",
+    "image_alt": "Picture of the store"
+  },
+  "store": {
+    "ctas": {
+      "website": "Website",
+      "directions": "Directions"
     },
     "features": {
       "feature-0": "Online store",
@@ -31,8 +35,7 @@
       "feature-3": "Disc resurfacing",
       "feature-4": "Battery replacement"
     },
-    "error_data": "Error loading store data",
-    "image_alt": "Picture of the store"
+    "propose_changes": "Propose a change for this store"
   },
   "summary": {
     "title": "The hunt is on!",
@@ -41,12 +44,17 @@
   "events": {
     "title_one": "Upcoming event",
     "title_other": "Upcoming events",
-    "more_details": "More details"
+    "more_details": "More details",
+    "no_events": " Nothing on the horizon..."
   },
   "contact": {
     "title": "EN: Vous aimeriez ajouter une adresse ou proposer une correction?",
     "details": "EN: Veuillez inscrire le plus de détails possible afin que je puisse bien traiter la demande.",
-    "button": "Contact me!"
+    "button": "Contact me!",
+    "email": "Email Address",
+    "message": "Message",
+    "submited": "Message sent!",
+    "submit": "Submit"
   },
   "notFound": {
     "text": "It seems that you have lost your way...",

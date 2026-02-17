@@ -1,0 +1,23 @@
+[
+    {
+        "name": {
+            "fr": "Réunion du CCJVQ",
+            "en": "CCJVQ Meeting"
+        },
+        "image": "https://baconmockup.com/800/200",
+        "description": {
+            "fr": "Boutique spécialisée dans les jeux outes les plateformes anciennes.",
+            "en": "A store specializing in retro video games and classic consoles. Come discover ."
+        },
+        "date": "2024-06-15",
+        "website": "https://retromtl.com/",
+        "address": {
+            "street": "4023 rue Hochelaga",
+            "city": "Montréal",
+            "zone": 6,
+            "region": "QC",
+            "country": "CA"
+        },
+        "closed": 0
+    }
+]
