@@ -16,6 +16,14 @@
       "map": "Carte",
       "list": "Liste"
     },
+    "list": {
+      "elsewhere_canada": "Ailleurs au Canada",
+      "elsewhere_usa": "Aux États-Unis"
+    },
+    "error_data": "Erreur lors du chargement des données des boutiques",
+    "image_alt": "Photo de la boutique"
+  },
+  "store": {
     "ctas": {
       "website": "Site Web",
       "directions": "Itinéraire"
@@ -27,12 +35,7 @@
       "feature-3": "Resurfaçage",
       "feature-4": "Remplacement de batterie"
     },
-    "list": {
-      "elsewhere_canada": "Ailleurs au Canada",
-      "elsewhere_usa": "Aux États-Unis"
-    },
-    "error_data": "Erreur lors du chargement des données des boutiques",
-    "image_alt": "Photo de la boutique"
+    "propose_changes": "Proposer un changement pour cette boutique"
   },
   "summary": {
     "title": "La chasse est ouverte!",
@@ -47,7 +50,11 @@
   "contact": {
     "title": "Vous aimeriez ajouter une adresse ou proposer une correction?",
     "details": "Veuillez inscrire le plus de détails possible afin que je puisse bien traiter la demande.",
-    "button": "Contactez-moi!"
+    "button": "Contactez-moi!",
+    "email": "Courriel",
+    "message": "Message",
+    "submited": "Message envoyé!",
+    "submit": "Envoyer"
   },
   "notFound": {
     "text": "On dirait que vous avez perdu votre chemin...",

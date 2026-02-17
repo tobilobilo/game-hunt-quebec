@@ -101,6 +101,13 @@
       margin-bottom: 0;
     }
 
+    .contact-form {
+      label {
+        font-size: .8rem;
+        font-weight: 400;
+      }
+    }
+
     .features {
       margin: 1rem 0;
       padding: 1rem 0;
@@ -137,6 +144,10 @@
 
       &:hover {
         color: $blue-light
+      }
+
+      &.expanded svg {
+        transform: rotate(180deg) translateY(-1px);
       }
     }
   }
@@ -186,6 +197,12 @@
 
     .suggest-change {
       font-size: .8em;
+    }
+
+    .contact-form {
+      label {
+        font-size: 0.9rem;
+      }
     }
   }
 }

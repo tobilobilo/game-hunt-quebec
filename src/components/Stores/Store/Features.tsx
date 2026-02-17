@@ -31,7 +31,7 @@ const Features = () => {
       {hasFeatures && <div className="features">
         {store?.features.map((feature) => (
           <div key={`${store.slug}-feature-${feature}`} className="feature">
-            <FontAwesomeIcon icon={featureIcon(feature)} /> {t(`stores.features.feature-${feature}`)}
+            <FontAwesomeIcon icon={featureIcon(feature)} /> {t(`store.features.feature-${feature}`)}
           </div>
         ))}
       </div>}

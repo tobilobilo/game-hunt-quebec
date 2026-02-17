@@ -1,0 +1,44 @@
+@use "sass:color";
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+
+  label,
+  input,
+  textarea {
+    border: none;
+  }
+
+  label {
+    margin-top: 1rem;
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border-radius: 5px;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  button {
+    margin-top: 1.25rem;
+  }
+
+  &.contact-form-light {
+
+    input,
+    textarea {
+      border: 1px solid $blue-dark-active;
+    }
+  }
+}

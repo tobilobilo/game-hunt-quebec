@@ -4,13 +4,12 @@ import icons from "/src/assets/svg/contact-icons.svg";
 import quebec from "/src/assets/svg/contact-quebec.svg";
 import quebecMobile from "/src/assets/svg/contact-quebec-mobile.svg";
 import Button from "../ui/Button/Button";
+import ContactForm from "../ContactForm/ContactForm";
+import { useState } from "react";
 
 const Contact = () => {
+  const [showForm, setShowForm] = useState(false);
   const { t } = useTranslation();
-
-  function contactMe() {
-    console.log('Contact Me!')
-  }
 
   return (
     <div className="main-contact col-12">
@@ -23,7 +22,8 @@ const Contact = () => {
         <div className="main-contact-infos">
           <h3>{t("contact.title")}</h3>
           <p>{t("contact.details")}</p>
-          <Button textKey="contact.button" variant="btn-white" onClick={contactMe} />
+          {!showForm && <Button textKey="contact.button" variant="btn-white" id="show-form" onClick={() => setShowForm(!showForm)} />}
+          {showForm && <ContactForm id="contact" />}
         </div>
       </div>
     </div>

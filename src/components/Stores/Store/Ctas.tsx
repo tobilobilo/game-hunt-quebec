@@ -12,10 +12,10 @@ const Ctas = () => {
     <>
       <div className="store-ctas">
         {store?.website && <>
-          <Button href={store.website} textKey={t("stores.ctas.website")} icon={faArrowPointer} size="btn-sm" external={true} />
+          <Button href={store.website} textKey={t("store.ctas.website")} icon={faArrowPointer} size="btn-sm" external={true} />
         </>}
         {getAddress(store) && <>
-          <Button href={`https://www.google.com/maps/dir/?api=1&destination=${getAddress(store)}`} textKey={t("stores.ctas.directions")} icon={faDiamondTurnRight} size="btn-sm" external={true} />
+          <Button href={`https://www.google.com/maps/dir/?api=1&destination=${getAddress(store)}`} textKey={t("store.ctas.directions")} icon={faDiamondTurnRight} size="btn-sm" external={true} />
         </>}
       </div>
     </>

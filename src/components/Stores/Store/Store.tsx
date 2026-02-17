@@ -4,30 +4,47 @@ import { useAppNavigation } from "../../../hooks/useNavigation";
 import { useStore } from "../../../hooks/useStore";
 import { getLabel } from "../../../utils/label";
 import Ctas from "./Ctas";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { getAddress } from "../../../utils/store";
 import Features from "./Features";
+import ContactForm from "../../ContactForm/ContactForm";
+import { useState, useEffect, useRef } from "react";
 
 
 const Store = () => {
   const { t } = useTranslation();
   const { goToHome } = useAppNavigation();
   const { store } = useStore();
+  const [showForm, setShowForm] = useState(false);
+  const contentRef = useRef<HTMLDivElement | null>(null);
+  const contentRefMobile = useRef<HTMLDivElement | null>(null);
   const { i18n } = useTranslation();
 
-  function suggestChange() {
-    console.log('suggest change TODO')
+  useEffect(() => {
+    if (!showForm || !contentRef.current || !contentRefMobile.current) return;
+    const contentWrapper = contentRef.current;
+    const contentWrapperMobile = contentRefMobile.current;
+    const raf = requestAnimationFrame(() => {
+      contentWrapper.scrollTo({ top: contentWrapper.scrollHeight, behavior: "smooth" });
+      contentWrapperMobile.scrollTo({ top: contentWrapperMobile.scrollHeight, behavior: "smooth" });
+    });
+    return () => cancelAnimationFrame(raf);
+  }, [showForm]);
+
+  function closeModal() {
+    setShowForm(false);
+    goToHome();
   }
 
   return (
     <>
-      {store && <div className="store-overlay">
-        <section className="store-content">
+      {store && <div className="store-overlay" onClick={closeModal}>
+        <section className="store-content" ref={contentRef} onClick={(e) => e.stopPropagation()}>
           <div className="store-close-wrapper">
-            <button className="store-close" onClick={goToHome} aria-label={t("action.close")}>×</button>
+            <button className="store-close" onClick={closeModal} aria-label={t("action.close")}>×</button>
           </div>
-          <div className="store-info-wrapper">
+          <div className="store-info-wrapper" ref={contentRefMobile}>
             <div className="store-img-wrapper">
               { store?.image && <img src={store?.image} alt={t("stores.image_alt")} className="store-img" /> }
             </div>
@@ -60,9 +77,12 @@ const Store = () => {
                   {getLabel(store?.description, i18n.language)}
                 </p>
               }
-
               
-              <button className="suggest-change" onClick={suggestChange}>Proposer un changement pour cette boutique</button>
+              <button className={`suggest-change ${showForm ? "expanded" : ""}`} onClick={() => setShowForm(prev => !prev)}>
+                {t("store.propose_changes")} <FontAwesomeIcon icon={faCaretDown} />
+              </button>
+
+              {showForm && <ContactForm id={store?.slug} theme="light" />}
             </div>
           </div>
         </section>
