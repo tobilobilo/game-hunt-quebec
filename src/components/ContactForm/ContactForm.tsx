@@ -1,7 +1,6 @@
 // Make sure to run npm install @formspree/react
 // For more help visit https://formspr.ee/react-help
 import "./ContactForm.scss";
-import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import { useTranslation } from 'react-i18next';
 

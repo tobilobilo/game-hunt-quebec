@@ -5,19 +5,23 @@ import { faCalendarDays } from "@fortawesome/free-solid-svg-icons";
 import { useData } from "../../contexts/DataContext";
 import Event from "./Event";
 import { Event as EventType } from "../../types/event";
+import { DateTime } from "luxon";
 
 const EventContainer = () => {
   const { t } = useTranslation();
   const { events } = useData();
 
+  const today = DateTime.now().startOf("day");
+  const futureEvents = events.filter((event) => today <= DateTime.fromISO(event.date));
+  
   return (
     <div className="event-container">
       <h2>
         <i aria-hidden="true"><FontAwesomeIcon icon={faCalendarDays} /></i> {t("events.title", {count: events.length})}
       </h2>
       <div className="events">
-          {events && events.length > 0 ? (
-            events.map((event: EventType, index) => (
+          {futureEvents.length > 0 ? (
+            futureEvents.map((event: EventType, index) => (
               <Event key={index} event={event} />
             ))
           ) : (

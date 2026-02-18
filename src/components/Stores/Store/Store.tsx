@@ -10,6 +10,7 @@ import { getAddress } from "../../../utils/store";
 import Features from "./Features";
 import ContactForm from "../../ContactForm/ContactForm";
 import { useState, useEffect, useRef } from "react";
+import { basename } from "../../../utils/path";
 
 
 const Store = () => {
@@ -32,6 +33,11 @@ const Store = () => {
     return () => cancelAnimationFrame(raf);
   }, [showForm]);
 
+  function imagePath(image: string) {
+    if (image.startsWith("http")) return image;
+    return basename().concat('/images/stores/', image);
+  }
+
   function closeModal() {
     setShowForm(false);
     goToHome();
@@ -46,7 +52,7 @@ const Store = () => {
           </div>
           <div className="store-info-wrapper" ref={contentRefMobile}>
             <div className="store-img-wrapper">
-              { store?.image && <img src={store?.image} alt={t("stores.image_alt")} className="store-img" /> }
+              { store?.image && <img src={imagePath(store?.image)} alt={t("stores.image_alt")} className="store-img" /> }
             </div>
             <div className="store-info">
               <div className="store-info-top">
@@ -65,9 +71,7 @@ const Store = () => {
                     </p>
                   }
                 </div>
-                <div>
-                  <Ctas />
-                </div>
+                <Ctas />
               </div>             
 
               <Features />
