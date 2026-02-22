@@ -4,12 +4,8 @@
   "action": {
     "close": "close"
   },
-  "header": {
-    
-  },
-  "footer": {
-
-  },
+  "header": {},
+  "footer": {},
   "stores": {
     "navtab": {
       "labeling": "Stores list view type",
