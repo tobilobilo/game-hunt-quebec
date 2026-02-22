@@ -11,7 +11,7 @@ import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 import "./Map.scss";
 import { Link } from "react-router";
 import { useAppNavigation } from "../../../hooks/useNavigation";
-import { useData } from "../../../contexts/DataContext";
+import { useData } from "../../../contexts/data/useData";
 
 type LeafletIconDefaultWithGetIconUrl = L.Icon.Default & {
   _getIconUrl?: () => string;

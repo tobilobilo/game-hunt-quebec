@@ -5,7 +5,7 @@ import Store from "../Store/Store";
 import "./Container.scss";
 import { faListUl, faLocationDot, faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useData } from "../../../contexts/DataContext";
+import { useData } from "../../../contexts/data/useData";
 import { useTranslation } from "react-i18next";
 
 const StoreContainer = () => {

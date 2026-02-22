@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import "./Event.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarDays } from "@fortawesome/free-solid-svg-icons";
-import { useData } from "../../contexts/DataContext";
+import { useData } from "../../contexts/data/useData";
 import Event from "./Event";
 import { Event as EventType } from "../../types/event";
 import { DateTime } from "luxon";

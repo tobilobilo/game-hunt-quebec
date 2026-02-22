@@ -1,18 +1,9 @@
-import { createContext, ReactNode, useContext, useEffect, useState } from "react";
-import { Store } from "../types/store";
-import { Places } from "../types/places";
-import { Event as EventType } from "../types/event";
-import { basename } from "../utils/path";
-
-type DataContextType = {
-  stores: Store[];
-  places: Places | null;
-  events: EventType[];
-  loading: boolean;
-  error: string | null;
-};
-
-const DataContext = createContext<DataContextType | undefined>(undefined);
+import { ReactNode, useEffect, useState } from "react";
+import { DataContext } from "./DataContext";
+import { Store } from "../../types/store";
+import { Places } from "../../types/places";
+import { Event as EventType } from "../../types/event";
+import { basename } from "../../utils/path";
 
 export const DataProvider = ({ children }: { children: ReactNode }) => {
   const [stores, setStores] = useState<Store[]>([]);
@@ -63,10 +54,4 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
       {children}
     </DataContext.Provider>
   );
-};
-
-export const useData = () => {
-  const context = useContext(DataContext);
-  if (!context) throw new Error('useData must be used within DataProvider');
-  return context;
 };

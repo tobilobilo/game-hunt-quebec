@@ -12,7 +12,7 @@ import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
 import { useParams } from "react-router";
 import NotFound from "./NotFound";
-import { DataProvider } from "../contexts/DataContext";
+import { DataProvider } from "../contexts/data/DataProvider";
 
 function App() {
   const { t } = useTranslation();

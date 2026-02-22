@@ -1,6 +1,6 @@
 import Masonry from 'react-masonry-css';
 import "./List.scss";
-import { useData } from '../../../contexts/DataContext';
+import { useData } from '../../../contexts/data/useData';
 import { getLabel } from '../../../utils/label';
 import i18next from 'i18next';
 import ListBrick from './ListBrick';
