@@ -5,7 +5,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "deploy": "turbo run deploy",
+    "deploy": "npm run format:check && turbo run deploy",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "check-types": "turbo run check-types"
