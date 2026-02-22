@@ -15,14 +15,33 @@ const Contact = () => {
     <div className="main-contact col-12">
       <div className="main-contact-content">
         <picture className="contact-quebec contact-img">
-          <source srcSet={quebec} media='(min-width: 840px)' />
-          <img src={quebecMobile} className="contact-img" alt="quebec" aria-hidden="true" draggable="false" />
+          <source srcSet={quebec} media="(min-width: 840px)" />
+          <img
+            src={quebecMobile}
+            className="contact-img"
+            alt="quebec"
+            aria-hidden="true"
+            draggable="false"
+          />
         </picture>
-        <img className="contact-icons contact-img" src={icons} alt="icons" aria-hidden="true" draggable="false" />
+        <img
+          className="contact-icons contact-img"
+          src={icons}
+          alt="icons"
+          aria-hidden="true"
+          draggable="false"
+        />
         <div className="main-contact-infos">
           <h3>{t("contact.title")}</h3>
           <p>{t("contact.details")}</p>
-          {!showForm && <Button textKey="contact.button" variant="btn-white" id="show-form" onClick={() => setShowForm(!showForm)} />}
+          {!showForm && (
+            <Button
+              textKey="contact.button"
+              variant="btn-white"
+              id="show-form"
+              onClick={() => setShowForm(!showForm)}
+            />
+          )}
           {showForm && <ContactForm id="contact" />}
         </div>
       </div>

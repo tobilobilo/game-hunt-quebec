@@ -14,13 +14,13 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
 
   const setData = (dataType: string, data: unknown) => {
     switch (dataType) {
-      case 'stores':
+      case "stores":
         setStores(data as Store[]);
         break;
-      case 'places':
+      case "places":
         setPlaces(data as Places);
         break;
-      case 'events':
+      case "events":
         setEvents(data as EventType[]);
         break;
       default:
@@ -29,24 +29,28 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
   };
 
   useEffect(() => {
-    const fetchData = async (dataType: string, filename: string, errorMessage: string) => {
+    const fetchData = async (
+      dataType: string,
+      filename: string,
+      errorMessage: string,
+    ) => {
       try {
         setLoading(true);
         setError(null);
-        const res = await fetch(basename().concat('/data/', filename));
+        const res = await fetch(basename().concat("/data/", filename));
         if (!res.ok) throw new Error(errorMessage);
         const data = await res.json();
         setData(dataType, data);
       } catch (err: unknown) {
-        setError((err as Error).message || 'Unknown error');
+        setError((err as Error).message || "Unknown error");
       } finally {
         setLoading(false);
       }
     };
 
-    fetchData('stores', 'stores.json', 'Failed to fetch store data');
-    fetchData('places', 'places.json', 'Failed to fetch places data');
-    fetchData('events', 'events.json', 'Failed to fetch events data');
+    fetchData("stores", "stores.json", "Failed to fetch store data");
+    fetchData("places", "places.json", "Failed to fetch places data");
+    fetchData("events", "events.json", "Failed to fetch events data");
   }, []);
 
   return (

@@ -11,7 +11,7 @@ import Footer from "../components/Footer/Footer";
 function NotFound() {
   const { goToHome } = useAppNavigation();
 
-  usePageTitle(`${t('title')} | 404`);
+  usePageTitle(`${t("title")} | 404`);
 
   return (
     <>

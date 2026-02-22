@@ -15,5 +15,5 @@ createRoot(document.getElementById("root")!).render(
         <Route path="*" element={<NotFound />} />
       </Routes>
     </HashRouter>
-  </StrictMode>
+  </StrictMode>,
 );

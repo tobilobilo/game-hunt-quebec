@@ -11,4 +11,6 @@ type DataContextType = {
   error: string | null;
 };
 
-export const DataContext = createContext<DataContextType | undefined>(undefined);
+export const DataContext = createContext<DataContextType | undefined>(
+  undefined,
+);

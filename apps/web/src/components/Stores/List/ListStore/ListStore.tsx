@@ -4,19 +4,15 @@ import { useAppNavigation } from "../../../../hooks/useNavigation";
 import { Store } from "../../../../types/store";
 
 interface ListStore {
-    store: Store
+  store: Store;
 }
 
-const ListStore = ({store}: ListStore) => {
+const ListStore = ({ store }: ListStore) => {
   const { getStorePath } = useAppNavigation();
 
   const href = getStorePath(store.slug);
 
-  return (
-    <Link to={href}>
-      {store.name}
-    </Link>
-  );
+  return <Link to={href}>{store.name}</Link>;
 };
 
 export default ListStore;

@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import MarkerClusterGroup from 'react-leaflet-markercluster';
+import MarkerClusterGroup from "react-leaflet-markercluster";
 import L from "leaflet";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerIconRetina from "leaflet/dist/images/marker-icon-2x.png";
@@ -18,7 +18,8 @@ type LeafletIconDefaultWithGetIconUrl = L.Icon.Default & {
 };
 
 // Fix Leaflet icon paths for bundled assets
-delete (L.Icon.Default.prototype as LeafletIconDefaultWithGetIconUrl)._getIconUrl;
+delete (L.Icon.Default.prototype as LeafletIconDefaultWithGetIconUrl)
+  ._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconUrl: markerIcon,
   iconRetinaUrl: markerIconRetina,
@@ -36,17 +37,29 @@ const Map = () => {
   return (
     // Make sure you set the height and width of the map container otherwise the map won't show
     <div id="map">
-      <MapContainer center={[latitude, longitude]} zoom={11} ref={mapRef} style={{ height: "100%", width: "100%" }} scrollWheelZoom={false}>
-        <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+      <MapContainer
+        center={[latitude, longitude]}
+        zoom={11}
+        ref={mapRef}
+        style={{ height: "100%", width: "100%" }}
+        scrollWheelZoom={false}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
         <MarkerClusterGroup>
           {/* Additional map layers or components can be added here */}
-          { stores && stores.map( store => (
-            <Marker position={store.position} key={store.slug}>
-              <Popup>
-                <Link to={getStorePath(store.slug)} className="popup-link">{ store.name }</Link>
-              </Popup>
-            </Marker>
-          ))}
+          {stores &&
+            stores.map((store) => (
+              <Marker position={store.position} key={store.slug}>
+                <Popup>
+                  <Link to={getStorePath(store.slug)} className="popup-link">
+                    {store.name}
+                  </Link>
+                </Popup>
+              </Marker>
+            ))}
         </MarkerClusterGroup>
       </MapContainer>
     </div>

@@ -14,12 +14,48 @@ const Banner = () => {
     <div className="banner col-12">
       <p>{t("motto")}</p>
       <div className="icons-container" aria-hidden="true">
-        <img src={iconRoad} alt="banner icon" className="banner-icon icon-road" aria-hidden="true" draggable="false" />
-        <img src={iconCar} alt="banner icon" className="banner-icon icon-car" aria-hidden="true" draggable="false" />
-        <img src={iconController} alt="banner icon" className="banner-icon icon-controller" aria-hidden="true" draggable="false" />
-        <img src={iconDollar} alt="banner icon" className="banner-icon icon-dollar" aria-hidden="true" draggable="false" />
-        <img src={iconGameboy} alt="banner icon" className="banner-icon icon-gameboy" aria-hidden="true" draggable="false" />
-        <img src={iconSnes} alt="banner icon" className="banner-icon icon-snes" aria-hidden="true" draggable="false" />
+        <img
+          src={iconRoad}
+          alt="banner icon"
+          className="banner-icon icon-road"
+          aria-hidden="true"
+          draggable="false"
+        />
+        <img
+          src={iconCar}
+          alt="banner icon"
+          className="banner-icon icon-car"
+          aria-hidden="true"
+          draggable="false"
+        />
+        <img
+          src={iconController}
+          alt="banner icon"
+          className="banner-icon icon-controller"
+          aria-hidden="true"
+          draggable="false"
+        />
+        <img
+          src={iconDollar}
+          alt="banner icon"
+          className="banner-icon icon-dollar"
+          aria-hidden="true"
+          draggable="false"
+        />
+        <img
+          src={iconGameboy}
+          alt="banner icon"
+          className="banner-icon icon-gameboy"
+          aria-hidden="true"
+          draggable="false"
+        />
+        <img
+          src={iconSnes}
+          alt="banner icon"
+          className="banner-icon icon-snes"
+          aria-hidden="true"
+          draggable="false"
+        />
       </div>
     </div>
   );

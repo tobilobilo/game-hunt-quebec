@@ -1,6 +1,13 @@
 import { useTranslation } from "react-i18next";
 import { useStore } from "../../../hooks/useStore";
-import { faArrowPointer, faCarBattery, faCartShopping, faCompactDisc, faSackDollar, faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowPointer,
+  faCarBattery,
+  faCartShopping,
+  faCompactDisc,
+  faSackDollar,
+  faScrewdriverWrench,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Features = () => {
@@ -10,7 +17,7 @@ const Features = () => {
   const hasFeatures = store?.features && store.features.length > 0;
 
   function featureIcon(feature: number) {
-    switch(feature) {
+    switch (feature) {
       case 0:
         return faCartShopping;
       case 1:
@@ -28,15 +35,18 @@ const Features = () => {
 
   return (
     <>
-      {hasFeatures && <div className="features">
-        {store?.features.map((feature) => (
-          <div key={`${store.slug}-feature-${feature}`} className="feature">
-            <FontAwesomeIcon icon={featureIcon(feature)} /> {t(`store.features.feature-${feature}`)}
-          </div>
-        ))}
-      </div>}
+      {hasFeatures && (
+        <div className="features">
+          {store?.features.map((feature) => (
+            <div key={`${store.slug}-feature-${feature}`} className="feature">
+              <FontAwesomeIcon icon={featureIcon(feature)} />{" "}
+              {t(`store.features.feature-${feature}`)}
+            </div>
+          ))}
+        </div>
+      )}
     </>
-  );   
+  );
 };
 
 export default Features;

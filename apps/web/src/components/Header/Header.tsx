@@ -12,7 +12,12 @@ const Header = () => {
       <div className="main-header-content">
         <h1>
           <button onClick={goToHome}>
-            <img src={logo} alt="Logo" className="header-logo" aria-hidden="true" />
+            <img
+              src={logo}
+              alt="Logo"
+              className="header-logo"
+              aria-hidden="true"
+            />
             {t("title")}
           </button>
         </h1>

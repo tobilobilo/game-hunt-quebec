@@ -9,7 +9,10 @@ const Summary = () => {
   return (
     <div className="summary">
       <h2>
-        <i aria-hidden="true"><FontAwesomeIcon icon={faCrosshairs} /></i> {t("summary.title")}
+        <i aria-hidden="true">
+          <FontAwesomeIcon icon={faCrosshairs} />
+        </i>{" "}
+        {t("summary.title")}
       </h2>
       <p>{t("summary.text")}</p>
     </div>

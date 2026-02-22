@@ -19,9 +19,9 @@ function App() {
   const { storeId } = useParams();
 
   useLanguageRoute();
-  usePageTitle(`${t('title')} | ${t('motto')}`);
+  usePageTitle(`${t("title")} | ${t("motto")}`);
 
-  if(storeId === 'error') return <NotFound />
+  if (storeId === "error") return <NotFound />;
 
   return (
     <DataProvider>

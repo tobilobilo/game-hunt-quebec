@@ -3,21 +3,21 @@ import { Label } from "./label";
 import { CountryCode, RegionCode } from "./places";
 
 export type Store = {
-  name: string,
-  slug: string,
-  position: LatLngTuple,
-  image: string,
-  description: Label,
-  phone: string,
-  website: string,
-  features: StoreFeature[],
+  name: string;
+  slug: string;
+  position: LatLngTuple;
+  image: string;
+  description: Label;
+  phone: string;
+  website: string;
+  features: StoreFeature[];
   address: {
-    street: string,
-    city: string,
-    zone: number,
-    region: RegionCode,
-    country: CountryCode
-  }
+    street: string;
+    city: string;
+    zone: number;
+    region: RegionCode;
+    country: CountryCode;
+  };
 };
 
 export enum StoreFeature {
