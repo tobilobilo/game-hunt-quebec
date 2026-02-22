@@ -1,23 +1,23 @@
 [
-    {
-        "name": {
-            "fr": "Réunion du CCJVQ",
-            "en": "CCJVQ Meeting"
-        },
-        "image": "001.png",
-        "description": {
-            "fr": "Boutique spécialisée dans les jeux outes les plateformes anciennes.",
-            "en": "A store specializing in retro video games and classic consoles. Come discover ."
-        },
-        "date": "2026-12-09",
-        "website": "https://retromtl.com/",
-        "address": {
-            "street": "4023 rue Hochelaga",
-            "city": "Montréal",
-            "zone": 6,
-            "region": "QC",
-            "country": "CA"
-        },
-        "closed": 0
-    }
+  {
+    "name": {
+      "fr": "Réunion du CCJVQ",
+      "en": "CCJVQ Meeting"
+    },
+    "image": "001.png",
+    "description": {
+      "fr": "Boutique spécialisée dans les jeux outes les plateformes anciennes.",
+      "en": "A store specializing in retro video games and classic consoles. Come discover ."
+    },
+    "date": "2026-12-09",
+    "website": "https://retromtl.com/",
+    "address": {
+      "street": "4023 rue Hochelaga",
+      "city": "Montréal",
+      "zone": 6,
+      "region": "QC",
+      "country": "CA"
+    },
+    "closed": 0
+  }
 ]

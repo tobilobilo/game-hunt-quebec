@@ -5,8 +5,8 @@
   display: inline-block;
   background-color: $blue-dark;
   color: #fff;
-  padding: .5rem 1rem;
-  font-size: .8rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
   border-radius: 5px;
   text-decoration: none;
   border: none;
@@ -18,7 +18,7 @@
   }
 
   @media (min-width: 768px) {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   &.btn-white {
@@ -32,16 +32,16 @@
   }
 
   &.btn-sm {
-    padding: .35rem .8rem;
-    font-size: .8rem;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.8rem;
 
     @media (min-width: 768px) {
-      font-size: .9rem;
+      font-size: 0.9rem;
     }
   }
 
   svg,
   i {
-    margin-right: .3rem;
+    margin-right: 0.3rem;
   }
 }

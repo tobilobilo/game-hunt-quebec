@@ -1,4 +1,4 @@
-html, 
+html,
 body {
   min-height: 100vh;
   color: $text-dark;
@@ -7,15 +7,43 @@ body {
   @include geologica-400;
   margin: 0;
   padding: 0;
-  background: rgb(255,255,255);
-  background: 
-    linear-gradient(117deg, rgba(255,255,255,0) 13%, rgb(232, 247, 255) 26%, rgb(223, 240, 255) 31%, rgba(244,251,255,1) 65%, rgba(245,248,249,0) 69%),
-    linear-gradient(331deg, rgba(255,255,255,0) 13%, rgb(220, 243, 255) 26%, rgb(221, 242, 253) 31%, rgba(244,251,255,1) 45%, rgba(245,248,249,0) 69%);
+  background: rgb(255, 255, 255);
+  background:
+    linear-gradient(
+      117deg,
+      rgba(255, 255, 255, 0) 13%,
+      rgb(232, 247, 255) 26%,
+      rgb(223, 240, 255) 31%,
+      rgba(244, 251, 255, 1) 65%,
+      rgba(245, 248, 249, 0) 69%
+    ),
+    linear-gradient(
+      331deg,
+      rgba(255, 255, 255, 0) 13%,
+      rgb(220, 243, 255) 26%,
+      rgb(221, 242, 253) 31%,
+      rgba(244, 251, 255, 1) 45%,
+      rgba(245, 248, 249, 0) 69%
+    );
 
   @media (min-width: 768px) {
-    background: 
-    linear-gradient(117deg, rgba(255,255,255,0) 13%, rgb(232, 247, 255) 26%, rgb(223, 240, 255) 31%, rgba(244,251,255,1) 45%, rgba(245,248,249,0) 69%),
-    linear-gradient(331deg, rgba(255,255,255,0) 13%, rgba(216,242,255,1) 26%, rgb(216, 242, 255) 31%, rgba(244,251,255,1) 45%, rgba(245,248,249,0) 69%);    
+    background:
+      linear-gradient(
+        117deg,
+        rgba(255, 255, 255, 0) 13%,
+        rgb(232, 247, 255) 26%,
+        rgb(223, 240, 255) 31%,
+        rgba(244, 251, 255, 1) 45%,
+        rgba(245, 248, 249, 0) 69%
+      ),
+      linear-gradient(
+        331deg,
+        rgba(255, 255, 255, 0) 13%,
+        rgba(216, 242, 255, 1) 26%,
+        rgb(216, 242, 255) 31%,
+        rgba(244, 251, 255, 1) 45%,
+        rgba(245, 248, 249, 0) 69%
+      );
   }
 }
 
@@ -37,7 +65,7 @@ body {
   }
 
   p {
-    font-size: .9rem;
+    font-size: 0.9rem;
     margin: 0;
 
     @media (min-width: 768px) {

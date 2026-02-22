@@ -24,12 +24,12 @@
   }
   p {
     margin: 15px auto 0;
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-weight: 300;
     max-width: 400px;
   }
   label {
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-weight: 300;
   }
   button#show-form {
@@ -44,7 +44,7 @@
 }
 
 .contact-quebec {
-  opacity: .8;
+  opacity: 0.8;
   width: 539px;
   position: absolute;
   top: -260px;
@@ -68,7 +68,7 @@
   }
 
   .contact-quebec {
-    opacity: .21;
+    opacity: 0.21;
     top: -325px;
     transform: translateX(-272px);
     width: 774px;
@@ -90,7 +90,7 @@
     label,
     p {
       margin-top: 20px;
-      font-size: .9rem;
+      font-size: 0.9rem;
       max-width: 430px;
     }
     button#show-form {

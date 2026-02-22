@@ -1,7 +1,7 @@
 @use "sass:color";
 
 .store-overlay {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
   position: fixed;
@@ -29,130 +29,128 @@
   padding: 0 0 20px;
 }
 
-  .store-close-wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
+.store-close-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.store-close {
+  cursor: pointer;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.75);
+  font-size: 2.5rem;
+  font-family: serif;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0.75rem;
+  border-radius: 50px;
+  color: #767676;
+  transition: all, 0.3s;
+
+  &:hover {
+    color: #18181a;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+}
+
+.store-img-wrapper {
+  min-height: 2.5rem;
+}
+
+.store-img {
+  display: block;
+  width: 100%;
+}
+
+.store-info {
+  padding: 0rem 1.5rem;
+
+  .store-info-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
-  .store-close {
-    cursor: pointer;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.75);
-    font-size: 2.5rem;
-    font-family: serif;
-    line-height: 40px;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    margin: .75rem;
-    border-radius: 50px;
-    color: #767676;
-    transition: all, .3s;
+  h1 {
+    @include front-title;
 
-    &:hover {
-      color: #18181a;
-      background-color: rgba(255, 255, 255, 0.95);
-    }
-  }
-
-  .store-img-wrapper {
-    min-height: 2.5rem;
-  }
-
-  .store-img {
-    display: block;
-    width: 100%;
-  }
-
-  .store-info {
-    padding: 0rem 1.5rem;
-
-    .store-info-top {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    h1 {
-      @include front-title;
-
-      & {
-        margin-bottom: 0;
-        white-space: nowrap;
-      }
-    }
-
-    .address {
-      margin: 0;
-      font-size: .85rem;
-      color: $text-light;
-    }
-
-    .phone {
-      margin: .7rem 0 0;
-      font-size: .8rem;
+    & {
+      margin-bottom: 0;
       white-space: nowrap;
     }
+  }
 
-    .description {
+  .address {
+    margin: 0;
+    font-size: 0.85rem;
+    color: $text-light;
+  }
+
+  .phone {
+    margin: 0.7rem 0 0;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .description {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  .contact-form {
+    label {
       font-size: 0.8rem;
-      margin-bottom: 0;
-    }
-
-    .contact-form {
-      label {
-        font-size: .8rem;
-        font-weight: 400;
-      }
-    }
-
-    .features {
-      margin: 1rem 0;
-      padding: 1rem 0;
-      border-top: 1px solid #e6e6e6;
-      border-bottom: 1px solid #e6e6e6;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 12px 20px;
-      margin-bottom: .75rem;
-      color: #5a5a5c;
-      font-weight: 300;
-      font-size: .8rem;
-    }
-
-    .store-ctas {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 1.2rem;
-    }
-
-    .suggest-change {
-      cursor: pointer;
-      border: none;
-      background-color: transparent;
-      color: $blue-dark-active;
-      font-size: .8rem;
-      padding: 0 0 .1rem;
-      margin-top: 1rem;
-      transition: all .4s;
-      @include link-hover-underlined($blue-light);
-
-      &:hover {
-        color: $blue-light
-      }
-
-      &.expanded svg {
-        transform: rotate(180deg) translateY(-1px);
-      }
+      font-weight: 400;
     }
   }
 
+  .features {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    margin-bottom: 0.75rem;
+    color: #5a5a5c;
+    font-weight: 300;
+    font-size: 0.8rem;
+  }
 
+  .store-ctas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1.2rem;
+  }
+
+  .suggest-change {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: $blue-dark-active;
+    font-size: 0.8rem;
+    padding: 0 0 0.1rem;
+    margin-top: 1rem;
+    transition: all 0.4s;
+    @include link-hover-underlined($blue-light);
+
+    &:hover {
+      color: $blue-light;
+    }
+
+    &.expanded svg {
+      transform: rotate(180deg) translateY(-1px);
+    }
+  }
+}
 
 @media (min-width: 575px) {
   .store-overlay {
@@ -176,14 +174,13 @@
   }
 
   .store-info {
-
     .address {
       margin-top: 0;
-      font-size: .95rem;
+      font-size: 0.95rem;
     }
 
     .phone {
-      margin-top: .85rem;
+      margin-top: 0.85rem;
       font-size: 0.9rem;
     }
 
@@ -196,7 +193,7 @@
     }
 
     .suggest-change {
-      font-size: .8em;
+      font-size: 0.8em;
     }
 
     .contact-form {

@@ -13,7 +13,7 @@
 @mixin front-title {
   @include geologica-400;
   font-size: 1.2rem;
-  margin-bottom: .4rem;
+  margin-bottom: 0.4rem;
 
   @media (min-width: 768px) {
     font-size: 1.5rem;

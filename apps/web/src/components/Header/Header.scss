@@ -33,7 +33,7 @@ header.main-header {
       background-color: transparent;
       cursor: pointer;
     }
-    
+
     .header-logo {
       display: inline;
       height: 1.4rem;
@@ -51,13 +51,13 @@ header.main-header {
 
 .change-language {
   margin: 0.75rem 0;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 
   .button {
     @include geologica-300;
     @include link-hover-underlined(#fff);
     color: white;
-    padding: 0 0 .1rem;
+    padding: 0 0 0.1rem;
     border: 0;
     background-color: transparent;
     cursor: pointer;

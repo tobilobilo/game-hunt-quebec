@@ -8,11 +8,11 @@
 .popup-link {
   text-decoration: none;
   color: $blue-dark-active;
-  font-size: .8rem;
-  transition: all .4s;
+  font-size: 0.8rem;
+  transition: all 0.4s;
   @include link-hover-underlined($blue-light);
 
   &:hover {
-    color: $blue-light
+    color: $blue-light;
   }
 }

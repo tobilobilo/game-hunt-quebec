@@ -4,12 +4,8 @@
   "action": {
     "close": "fermer"
   },
-  "header": {
-    
-  },
-  "footer": {
-    
-  },
+  "header": {},
+  "footer": {},
   "stores": {
     "navtab": {
       "labeling": "Type d'affichage des boutiques",
