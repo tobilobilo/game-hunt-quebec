@@ -1,14 +1,16 @@
-import { useMemo } from "react";
 import "./ListStore.scss";
 import { Link } from "react-router";
 import { useAppNavigation } from "../../../../hooks/useNavigation";
-import { useTranslation } from "react-i18next";
+import { Store } from "../../../../types/store";
 
-const ListStore = ({store}: any) => {
+interface ListStore {
+    store: Store
+}
+
+const ListStore = ({store}: ListStore) => {
   const { getStorePath } = useAppNavigation();
-  const { i18n } = useTranslation();
 
-  const href = useMemo(() => getStorePath(store.slug), [store.slug, i18n.language]);
+  const href = getStorePath(store.slug);
 
   return (
     <Link to={href}>

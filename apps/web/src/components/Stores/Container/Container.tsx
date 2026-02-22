@@ -30,7 +30,7 @@ const StoreContainer = () => {
     }
   ];
 
-  function handleKeyDown(event:any) {
+  function handleKeyDown(event: React.KeyboardEvent<HTMLButtonElement>) {
     enableFocusOnTabs.current = true;
 
     if (event.key === 'ArrowRight') {

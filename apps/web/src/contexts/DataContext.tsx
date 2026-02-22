@@ -21,38 +21,38 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchData = async (dataType: string, filename: string, errorMessage: string) => {
-    try {
-      setLoading(true);
-      setError(null);
-      const res = await fetch(basename().concat('/data/', filename));
-      if (!res.ok) throw new Error(errorMessage);
-      const data = await res.json();
-      setData(dataType, data);
-    } catch (err: any) {
-      setError(err.message || 'Unknown error');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const setData = (dataType: string, data: any) => {
+  const setData = (dataType: string, data: unknown) => {
     switch (dataType) {
       case 'stores':
-        setStores(data);
+        setStores(data as Store[]);
         break;
       case 'places':
-        setPlaces(data);
+        setPlaces(data as Places);
         break;
       case 'events':
-        setEvents(data);
+        setEvents(data as EventType[]);
         break;
       default:
         console.warn(`Unknown data type: ${dataType}`);
     }
   };
 
-  useEffect(() => {  
+  useEffect(() => {
+    const fetchData = async (dataType: string, filename: string, errorMessage: string) => {
+      try {
+        setLoading(true);
+        setError(null);
+        const res = await fetch(basename().concat('/data/', filename));
+        if (!res.ok) throw new Error(errorMessage);
+        const data = await res.json();
+        setData(dataType, data);
+      } catch (err: unknown) {
+        setError((err as Error).message || 'Unknown error');
+      } finally {
+        setLoading(false);
+      }
+    };
+
     fetchData('stores', 'stores.json', 'Failed to fetch store data');
     fetchData('places', 'places.json', 'Failed to fetch places data');
     fetchData('events', 'events.json', 'Failed to fetch events data');

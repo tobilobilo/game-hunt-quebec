@@ -13,8 +13,12 @@ import { Link } from "react-router";
 import { useAppNavigation } from "../../../hooks/useNavigation";
 import { useData } from "../../../contexts/DataContext";
 
+type LeafletIconDefaultWithGetIconUrl = L.Icon.Default & {
+  _getIconUrl?: () => string;
+};
+
 // Fix Leaflet icon paths for bundled assets
-delete (L.Icon.Default.prototype as any)._getIconUrl;
+delete (L.Icon.Default.prototype as LeafletIconDefaultWithGetIconUrl)._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconUrl: markerIcon,
   iconRetinaUrl: markerIconRetina,
