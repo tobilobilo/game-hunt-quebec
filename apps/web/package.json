@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "@repo/typescript-config": "*",
+    "@repo/eslint-config": "*",
     "@eslint/js": "^9.39.2",
     "@types/leaflet": "^1.9.21",
     "@types/node": "^22.13.1",
