@@ -19,10 +19,10 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
-    "prettier": "^3.7.4",
-    "turbo": "^2.8.12",
+    "prettier": "^3.9.10",
+    "turbo": "^2.11.10",
     "typescript": "5.9.2",
-    "typescript-eslint": "^8.25.0"
+    "typescript-eslint": "^8.72.0"
   },
   "engines": {
     "node": ">=18"
