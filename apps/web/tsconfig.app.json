@@ -1,7 +1,5 @@
 {
   "extends": "@repo/typescript-config/app",
-  "compilerOptions": {
-    "baseUrl": "../src"
-  },
+  "compilerOptions": {},
   "include": ["src"]
 }
