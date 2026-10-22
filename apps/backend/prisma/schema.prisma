@@ -1,0 +1,70 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Category {
+  id        String    @id @default(cuid())
+  name      String
+  slug      String    @unique
+  type      String
+  order     Int       @default(0)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  events    Event[]
+  stores    Store[]
+}
+
+model Event {
+  id          String    @id @default(cuid())
+  title       String
+  slug        String    @unique
+  description String?
+  startDate   DateTime?
+  endDate     DateTime?
+  location    String?
+  categoryId  String?
+  status      String    @default("draft")
+  image       String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  category Category? @relation(fields: [categoryId], references: [id])
+}
+
+model Store {
+  id          String    @id @default(cuid())
+  name        String
+  slug        String    @unique
+  description String?
+  address     String?
+  city        String?
+  latitude    Float?
+  longitude   Float?
+  website     String?
+  image       String?
+  categoryId  String?
+  status      String    @default("draft")
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  category Category? @relation(fields: [categoryId], references: [id])
+}
+
+model Place {
+  id          String    @id @default(cuid())
+  name        String
+  slug        String    @unique
+  type        String?
+  region      String?
+  description String?
+  latitude    Float?
+  longitude   Float?
+  status      String    @default("draft")
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
