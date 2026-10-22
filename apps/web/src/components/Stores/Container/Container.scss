@@ -1,0 +1,119 @@
+@use "sass:color";
+
+.stores-container {
+  margin-top: 40px;
+  -webkit-box-shadow: 2px 2px 10px 1px rgba(0, 35, 94, 0.2);
+  box-shadow: 2px 2px 10px 1px rgba(0, 35, 94, 0.2);
+
+  [role="tabpanel"] {
+    height: 100%;
+    width: 100%;
+  }
+
+  .store-loader {
+    animation: loaderSpining 0.8s steps(1, end) infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: $blue-light;
+  }
+
+  @keyframes loaderSpining {
+    0% {
+      transform: rotate(45deg);
+    }
+    12.5% {
+      transform: rotate(90deg);
+    }
+    25% {
+      transform: rotate(135deg);
+    }
+    37.5% {
+      transform: rotate(180deg);
+    }
+    50% {
+      transform: rotate(225deg);
+    }
+    67.5% {
+      transform: rotate(270deg);
+    }
+    75% {
+      transform: rotate(315deg);
+    }
+    87.5% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .stores-content {
+    position: relative;
+    height: 600px;
+  }
+
+  .data-error {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding: 1.2rem;
+
+    strong {
+      font-size: 1.2rem;
+    }
+  }
+
+  .nav-tab {
+    background-color: $blue-light;
+
+    nav {
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0 1.2rem;
+      display: flex;
+      flex-direction: row;
+    }
+
+    li {
+    }
+
+    button {
+      display: block;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      color: #fff;
+      font: inherit;
+      font-weight: 300;
+      font-size: 1rem;
+      padding: 0.5rem 1.4rem;
+      transition: all 0.4s;
+
+      &[aria-selected="true"],
+      &:hover {
+        background-color: $blue-dark-active;
+      }
+
+      i {
+        margin-right: 0.25rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .stores-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

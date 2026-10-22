@@ -1,0 +1,59 @@
+{
+  "title": "Le Bottin à Cassettes",
+  "motto": "Le répertoire des boutiques de jeux vidéos du Québec",
+  "action": {
+    "close": "fermer"
+  },
+  "header": {},
+  "footer": {},
+  "stores": {
+    "navtab": {
+      "labeling": "Type d'affichage des boutiques",
+      "map": "Carte",
+      "list": "Liste"
+    },
+    "list": {
+      "elsewhere_canada": "Ailleurs au Canada",
+      "elsewhere_usa": "Aux États-Unis"
+    },
+    "error_data": "Erreur lors du chargement des données des boutiques",
+    "image_alt": "Photo de la boutique"
+  },
+  "store": {
+    "ctas": {
+      "website": "Site Web",
+      "directions": "Itinéraire"
+    },
+    "features": {
+      "feature-0": "Boutique en ligne",
+      "feature-1": "Achat de jeux",
+      "feature-2": "Réparation",
+      "feature-3": "Resurfaçage",
+      "feature-4": "Remplacement de batterie"
+    },
+    "propose_changes": "Proposer un changement pour cette boutique"
+  },
+  "summary": {
+    "title": "La chasse est ouverte!",
+    "text": "Ce projet cherche à regrouper les adresses des boutiques et des destinations à connaître pour les amateurs et collectioneurs de jeux vidéos de la province. Mon but est d'amasser de de maintenir les informations sur ces adresses afin de garder ce répertoire le plus à jour possible."
+  },
+  "events": {
+    "title_one": "Événement à venir",
+    "title_other": "Événements à venir",
+    "more_details": "Plus de détails",
+    "no_events": "Rien à l'horizon..."
+  },
+  "contact": {
+    "title": "Vous aimeriez ajouter une adresse ou proposer une correction?",
+    "details": "Veuillez inscrire le plus de détails possible afin que je puisse bien traiter la demande.",
+    "button": "Contactez-moi!",
+    "email": "Courriel",
+    "message": "Message",
+    "submited": "Message envoyé!",
+    "submit": "Envoyer"
+  },
+  "notFound": {
+    "text": "On dirait que vous avez perdu votre chemin...",
+    "backBtn": "Retour à l'accueil"
+  }
+}

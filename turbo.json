@@ -1,0 +1,30 @@
+{
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "lint": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "check-types": {
+      "dependsOn": ["^build", "^check-types"]
+    },
+    "dev": {
+      "persistent": true,
+      "cache": false
+    },
+    "deploy": {
+      "dependsOn": ["build", "lint", "check-types", "test"],
+      "cache": false
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "coverage": {
+      "outputs": ["coverage/**"]
+    }
+  }
+}
